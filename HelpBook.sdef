@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary title="HelpBook Terminology">
+	<suite name="HelpBook Suite" code="HBsu" description="Treat Help Books in bundles">
+		<command name="register helpbook" code="HBsurgHB" description="Register a help book in specified bundle.">
+			<direct-parameter description="a bundle path or reference which contains a help book." type="file" optional="yes"/>
+			<result description="name of the registered help book." type="text"/>
+		</command>
+		<command name="show helpbook" code="HBsushHB" description="show a help book in specfied bundle with Help Viewer.">
+			<direct-parameter description="reference or path to a bundle which have a help book." type="file" optional="yes"/>
+			<result description="name of the registered help book." type="text"/>
+		</command>
+	</suite>
+</dictionary>
