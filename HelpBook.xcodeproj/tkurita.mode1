@@ -272,8 +272,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>4</integer>
-									<integer>1</integer>
+									<integer>8</integer>
+									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -327,12 +327,12 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C76E30809EAC744000CC37E</string>
+										<string>2C5D6B4409EACC2A009B8314</string>
 										<key>history</key>
 										<array>
 											<string>2C66DC1709DA894A00EDC012</string>
 											<string>2C8131B809E976C8008E10EB</string>
-											<string>2C76E29A09EA2322000CC37E</string>
+											<string>2C76E30809EAC744000CC37E</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -367,7 +367,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>HelpBookHandlers.c</string>
+								<string>Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -375,18 +375,19 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>HelpBookHandlers.c</string>
+										<string>Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C76E30909EAC744000CC37E</string>
+										<string>2C5D6B4809EACC2A009B8314</string>
 										<key>history</key>
 										<array>
 											<string>2C66DC1709DA894A00EDC012</string>
 											<string>2C8131B809E976C8008E10EB</string>
 											<string>2C76E29B09EA2322000CC37E</string>
 											<string>2C76E29C09EA2322000CC37E</string>
-											<string>2C76E2B609EA2322000CC37E</string>
+											<string>2C5D6B4509EACC2A009B8314</string>
+											<string>2C5D6B4609EACC2A009B8314</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -395,6 +396,7 @@
 											<string>2C66DC1F09DA8A0C00EDC012</string>
 											<string>2C76E29F09EA2322000CC37E</string>
 											<string>2C76E2A209EA2322000CC37E</string>
+											<string>2C5D6B4709EACC2A009B8314</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -453,9 +455,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2C76E30A09EAC744000CC37E</string>
+				<string>2C5D6B4909EACC2A009B8314</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>2C76E30B09EAC744000CC37E</string>
+				<string>2C5D6B4A09EACC2A009B8314</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
