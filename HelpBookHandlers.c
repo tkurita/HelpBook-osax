@@ -158,6 +158,7 @@ OSErr registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
 					err = getFSRefFromAE(ev, &bundleFSRef);
 					break;
 				case typeChar:
+				case typeUTF8Text:
 				case typeUnicodeText:
 					err = utextPathToFSRef(ev, &bundleFSRef, &urlRef);
 					break;
@@ -202,8 +203,8 @@ bail:
 OSErr setupReplyForString(CFStringRef inText, AppleEvent *reply)
 {
 	OSErr err = noErr;
-	char buffer[MAXPATHLEN];
-	CFStringGetCString(inText, buffer, MAXPATHLEN, kCFStringEncodingUTF8);
+	char buffer[MAXPATHLEN+1];
+	CFStringGetCString(inText, buffer, MAXPATHLEN+1, kCFStringEncodingUTF8);
 	AEDesc resultDesc;
 	err=AECreateDesc (typeUTF8Text, buffer, strlen(buffer), &resultDesc);
 	
