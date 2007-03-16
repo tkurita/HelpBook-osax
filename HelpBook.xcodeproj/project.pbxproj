@@ -18,6 +18,8 @@
 		2C76E22A09EA1DB6000CC37E /* HelpBookHandlers.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */; };
 		2C76E22B09EA1DB6000CC37E /* HelpBookHandlers.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */; };
 		2CB6DAB709591BA0009A18B4 /* Scripting.r in Rez */ = {isa = PBXBuildFile; fileRef = 2C72FFB109583F760091C86F /* Scripting.r */; };
+		2CCF2A560BAA7EE900A6496C /* AEUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF2A540BAA7EE900A6496C /* AEUtils.c */; };
+		2CCF2A570BAA7EE900A6496C /* AEUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF2A540BAA7EE900A6496C /* AEUtils.c */; };
 		8D576314048677EA00EA77CD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,13 +27,15 @@
 		0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		2C72FD2D095819360091C86F /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		2C72FD30095819440091C86F /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		2C72FDBF095836400091C86F /* HelpBook App.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "HelpBook App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C72FDBF095836400091C86F /* HelpBook App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelpBook App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C72FDC1095836400091C86F /* HelpBook App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "HelpBook App-Info.plist"; sourceTree = "<group>"; };
 		2C72FEAA095838150091C86F /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
 		2C72FFAF09583F670091C86F /* HelpBook.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.sdef; path = HelpBook.sdef; sourceTree = "<group>"; };
 		2C72FFB109583F760091C86F /* Scripting.r */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; path = Scripting.r; sourceTree = "<group>"; };
 		2C76E22809EA1DB6000CC37E /* HelpBookHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpBookHandlers.h; sourceTree = "<group>"; };
 		2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HelpBookHandlers.c; sourceTree = "<group>"; };
+		2CCF2A540BAA7EE900A6496C /* AEUtils.c */ = {isa = PBXFileReference; fileEncoding = "-2147483647"; lastKnownFileType = sourcecode.c.c; path = AEUtils.c; sourceTree = "<group>"; };
+		2CCF2A550BAA7EE900A6496C /* AEUtils.h */ = {isa = PBXFileReference; fileEncoding = "-2147483647"; lastKnownFileType = sourcecode.c.h; path = AEUtils.h; sourceTree = "<group>"; };
 		8D576316048677EA00EA77CD /* HelpBook.osax */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelpBook.osax; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D576317048677EA00EA77CD /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.xml; fileEncoding = 4; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +67,7 @@
 		089C166AFE841209C02AAC07 /* UnEscapeURL */ = {
 			isa = PBXGroup;
 			children = (
+				2CCF2A530BAA7EE900A6496C /* AEUtils */,
 				08FB77AFFE84173DC02AAC07 /* Source */,
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
@@ -109,6 +114,15 @@
 				2C72FDBF095836400091C86F /* HelpBook App.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2CCF2A530BAA7EE900A6496C /* AEUtils */ = {
+			isa = PBXGroup;
+			children = (
+				2CCF2A540BAA7EE900A6496C /* AEUtils.c */,
+				2CCF2A550BAA7EE900A6496C /* AEUtils.h */,
+			);
+			path = AEUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +224,7 @@
 			files = (
 				2C72FE850958366C0091C86F /* main.c in Sources */,
 				2C76E22B09EA1DB6000CC37E /* HelpBookHandlers.c in Sources */,
+				2CCF2A570BAA7EE900A6496C /* AEUtils.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +234,7 @@
 			files = (
 				2C72FD31095819440091C86F /* main.c in Sources */,
 				2C76E22A09EA1DB6000CC37E /* HelpBookHandlers.c in Sources */,
+				2CCF2A560BAA7EE900A6496C /* AEUtils.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
