@@ -6,8 +6,8 @@
 			<direct-parameter description="a bundle path or reference which contains a help book." type="file" optional="yes"/>
 			<result description="name of the registered help book." type="text"/>
 		</command>
-		<command name="show helpbook" code="HBsushHB" description="show a help book in specfied bundle with Help Viewer.">
-			<direct-parameter description="reference or path to a bundle which have a help book." type="file" optional="yes"/>
+		<command name="show helpbook" code="HBsushHB" description="Show a help book in specfied bundle with Help Viewer.">
+			<direct-parameter description="a reference to a bundle which contains a help book." type="file" optional="yes"/>
 			<result description="name of the registered help book." type="text"/>
 		</command>
 	</suite>

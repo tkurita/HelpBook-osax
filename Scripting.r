@@ -37,13 +37,13 @@ resource 'aete' (0, "HelpBook Terminology") {
 			},
 
 			"show helpbook",
-			"show a help book in specfied bundle with Help Viewer.",
+			"Show a help book in specfied bundle with Help Viewer.",
 			'HBsu', 'shHB',
 			'TEXT',
 			"name of the registered help book.",
 			replyRequired, singleItem, notEnumerated, Reserved13,
 			'file',
-			"reference or path to a bundle which have a help book.",
+			"a reference to a bundle which contains a help book.",
 			directParamOptional,
 			singleItem, notEnumerated, Reserved13,
 			{
