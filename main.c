@@ -84,7 +84,7 @@ static void RemoveMyEventHandlers()
 	}
 	//printf("end RemoveMyEventHandlers\n");
 }
-
+#if !__LP64__
 int main(int argc, char *argv[]) // for debugging
 {
 	//AHGotoPage(CFSTR("KeyValueDictionary Help"), NULL, NULL);
@@ -94,3 +94,4 @@ int main(int argc, char *argv[]) // for debugging
 	
 	return 0;
 }
+#endif

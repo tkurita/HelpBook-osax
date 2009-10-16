@@ -120,7 +120,7 @@ bail:
 */
 
 #pragma mark functions to install AppleEvent Managers
-OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, long refcon)
+OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon)
 {	
 	++gAdditionReferenceCount;
 #if useLog
@@ -143,7 +143,7 @@ bail:
 	return err;
 }
 
-OSErr showHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, long refcon)
+OSErr showHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon)
 {
 	++gAdditionReferenceCount;
 #if useLog
