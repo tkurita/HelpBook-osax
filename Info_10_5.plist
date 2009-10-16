@@ -6,14 +6,8 @@
 	<string>Japanese</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.1</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>copyright 2006-2009, Tetsuro KURITA</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.1 copyright 2006-2009, Tetsuro KURITA</string>
-	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>1.0.2 copyright 2006-2009, Tetsuro KURITA</string>
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
@@ -24,32 +18,24 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>osax</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.2</string>
 	<key>CFBundleSignature</key>
 	<string>ascr</string>
+	<key>CFBundleVersion</key>
+	<string>2</string>
 	<key>CSResourcesFileMapped</key>
 	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>copyright 2006-2009, Tetsuro KURITA</string>
 	<key>OSAXHandlers</key>
 	<dict>
 		<key>Events</key>
 		<dict>
-			<key>HBsushHB</key>
-			<dict>
-				<key>Handler</key>
-				<string>showHelpBookHandler</string>
-				<key>ThreadSafe</key>
-				<true/>
-				<key>Context</key>
-				<string>Process</string>
-			</dict>
 			<key>HBsurgHB</key>
-			<dict>
-				<key>Handler</key>
-				<string>registerHelpBookHandler</string>
-				<key>ThreadSafe</key>
-				<true/>
-				<key>Context</key>
-				<string>Process</string>
-			</dict>
+			<string>registerHelpBookHandler</string>
+			<key>HBsushHB</key>
+			<string>showHelpBookHandler</string>
 		</dict>
 	</dict>
 </dict>

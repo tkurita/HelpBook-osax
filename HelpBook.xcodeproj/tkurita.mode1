@@ -185,48 +185,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>2CCF2AEC0BAAAAD300A6496C</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>HelpBookHandlers.c</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>2CCF2AED0BAAAAD300A6496C</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>HelpBookHandlers.c</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>2C58595A0BAFA1F700D46AD8</string>
-						<key>history</key>
-						<array>
-							<string>2CCF2B260BAAAED800A6496C</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {767, 684}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>15 208 767 725 0 0 1440 938 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -307,7 +266,6 @@
 								<string>089C1671FE841209C02AAC07</string>
 								<string>2C72FD2D095819360091C86F</string>
 								<string>19C28FB6FE9D52B211CA2CBB</string>
-								<string>8D576316048677EA00EA77CD</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
@@ -315,8 +273,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>25</integer>
-									<integer>24</integer>
+									<integer>5</integer>
+									<integer>4</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -341,7 +300,7 @@
 							<real>232</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>145 123 1081 815 0 0 1440 938 </string>
+						<string>146 123 1081 815 0 0 1440 938 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -357,7 +316,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>HelpBookHandlers.c</string>
+								<string>main.c</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -365,20 +324,20 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>HelpBookHandlers.c</string>
+										<string>main.c</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C5859560BAFA1F700D46AD8</string>
+										<string>2C3AE63B0C9953B90081D05E</string>
 										<key>history</key>
 										<array>
 											<string>2C66DC1709DA894A00EDC012</string>
 											<string>2C8131B809E976C8008E10EB</string>
-											<string>2CCF2AD60BAAAAD300A6496C</string>
 											<string>2CCF2AD80BAAAAD300A6496C</string>
 											<string>2CCF2AF50BAAAD0400A6496C</string>
 											<string>2CCF2AF60BAAAD0400A6496C</string>
-											<string>2CCF2B240BAAAED800A6496C</string>
+											<string>2C3AE6140C9952EF0081D05E</string>
+											<string>2C3AE63A0C9953B90081D05E</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -389,6 +348,7 @@
 											<string>2CCF2ADC0BAAAAD300A6496C</string>
 											<string>2CCF2ADD0BAAAAD300A6496C</string>
 											<string>2CCF2ADE0BAAAAD300A6496C</string>
+											<string>2C3AE6160C9952EF0081D05E</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -402,7 +362,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {805, 461}}</string>
 								<key>RubberWindowFrame</key>
-								<string>145 123 1081 815 0 0 1440 938 </string>
+								<string>146 123 1081 815 0 0 1440 938 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -415,7 +375,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AEUtils.c</string>
+								<string>HelpBook.sdef</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -423,20 +383,20 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AEUtils.c</string>
+										<string>HelpBook.sdef</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C5859570BAFA1F700D46AD8</string>
+										<string>2C3AE63C0C9953B90081D05E</string>
 										<key>history</key>
 										<array>
 											<string>2C66DC1709DA894A00EDC012</string>
-											<string>2C8131B809E976C8008E10EB</string>
 											<string>2C8007C209ED274B00E9B3AC</string>
 											<string>2CCF2AE00BAAAAD300A6496C</string>
 											<string>2CCF2AE10BAAAAD300A6496C</string>
 											<string>2CCF2B1D0BAAAECC00A6496C</string>
-											<string>2CCF2B250BAAAED800A6496C</string>
+											<string>2C5859880BAFAB6600D46AD8</string>
+											<string>2C585A4B0BAFB1DE00D46AD8</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -460,7 +420,7 @@
 								<key>Frame</key>
 								<string>{{0, 466}, {805, 247}}</string>
 								<key>RubberWindowFrame</key>
-								<string>145 123 1081 815 0 0 1440 938 </string>
+								<string>146 123 1081 815 0 0 1440 938 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -480,7 +440,7 @@
 								<key>Frame</key>
 								<string>{{0, 718}, {805, 56}}</string>
 								<key>RubberWindowFrame</key>
-								<string>145 123 1081 815 0 0 1440 938 </string>
+								<string>146 123 1081 815 0 0 1440 938 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -505,9 +465,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2C5859580BAFA1F700D46AD8</string>
+				<string>2C3AE6190C9952EF0081D05E</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>2C5859590BAFA1F700D46AD8</string>
+				<string>2C3AE61A0C9952EF0081D05E</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
@@ -642,11 +602,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>2CCF2AEC0BAAAAD300A6496C</string>
 		<string>/Users/tkurita/Dev/Projects/HelpBookOSAX/trunk/HelpBook.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>145 123 1081 815 0 0 1440 938 </string>
+	<string>146 123 1081 815 0 0 1440 938 </string>
 	<key>WindowTools</key>
 	<array>
 		<dict>
@@ -667,21 +626,21 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>HelpBookHandlers.c</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {912, 325}}</string>
+								<string>{{0, 0}, {912, 186}}</string>
 								<key>RubberWindowFrame</key>
 								<string>221 303 912 579 0 0 1440 938 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>325pt</string>
+							<string>186pt</string>
 						</dict>
 						<dict>
 							<key>BecomeActive</key>
@@ -689,7 +648,7 @@
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBuildLogShowsTranscriptDefaultKey</key>
-								<string>{{0, 120}, {912, 89}}</string>
+								<string>{{0, 116}, {912, 232}}</string>
 								<key>PBXProjectModuleGUID</key>
 								<string>XCMainBuildResultsModuleGUID</string>
 								<key>PBXProjectModuleLabel</key>
@@ -702,14 +661,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 329}, {912, 209}}</string>
+								<string>{{0, 191}, {912, 348}}</string>
 								<key>RubberWindowFrame</key>
 								<string>221 303 912 579 0 0 1440 938 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
 							<key>Proportion</key>
-							<string>209pt</string>
+							<string>348pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -727,7 +686,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>2C72FF8F09583DB50091C86F</string>
-				<string>2CCF2AA30BAAA82C00A6496C</string>
+				<string>2C5859760BAFA2F700D46AD8</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -738,7 +697,7 @@
 			<key>WindowToolGUID</key>
 			<string>2C72FF8F09583DB50091C86F</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
