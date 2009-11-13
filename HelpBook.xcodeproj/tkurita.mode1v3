@@ -270,19 +270,22 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>089C166AFE841209C02AAC07</string>
+								<string>2CCF2A530BAA7EE900A6496C</string>
 								<string>08FB77AFFE84173DC02AAC07</string>
 								<string>089C167CFE841241C02AAC07</string>
 								<string>19C28FB6FE9D52B211CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
+								<string>2C2B97B010ACE154007C570A</string>
+								<string>2C2B97B110ACE154007C570A</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
-									<integer>6</integer>
-									<integer>0</integer>
+									<integer>27</integer>
+									<integer>26</integer>
+									<integer>19</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -323,7 +326,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Info.plist</string>
+								<string></string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -331,7 +334,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Info.plist</string>
+										<string></string>
 										<key>history</key>
 										<array>
 											<string>2C66DC1709DA894A00EDC012</string>
@@ -378,7 +381,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Info_10_5.plist</string>
+								<string>HelpBook.r</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -386,23 +389,22 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Info_10_5.plist</string>
+										<string>HelpBook.r</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C72FBA810886C7D00EEB86D</string>
+										<string>2C2B97C410ACE25E007C570A</string>
 										<key>history</key>
 										<array>
-											<string>2C66DC1709DA894A00EDC012</string>
 											<string>2CD84DEE1035182A00C1CFA3</string>
 											<string>2C18E6BC108800B300C065E2</string>
-											<string>2C18E6BD108800B300C065E2</string>
 											<string>2C18E73C1088096700C065E2</string>
 											<string>2C72FB9310886C5500EEB86D</string>
 											<string>2C72FB9410886C5500EEB86D</string>
 											<string>2C72FB9510886C5500EEB86D</string>
-											<string>2C72FBA510886C7D00EEB86D</string>
-											<string>2C72FBA610886C7D00EEB86D</string>
+											<string>2C2B97BB10ACE250007C570A</string>
+											<string>2C2B97BC10ACE250007C570A</string>
+											<string>2C2B97BD10ACE250007C570A</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -416,10 +418,8 @@
 											<string>2C18E6C3108800B300C065E2</string>
 											<string>2C18E6C7108800B300C065E2</string>
 											<string>2C18E7401088096700C065E2</string>
-											<string>2C72FB9710886C5500EEB86D</string>
-											<string>2C72FB9810886C5500EEB86D</string>
-											<string>2C72FB9910886C5500EEB86D</string>
-											<string>2C72FBA710886C7D00EEB86D</string>
+											<string>2C2B97BE10ACE250007C570A</string>
+											<string>2C2B97BF10ACE250007C570A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -478,9 +478,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2C72FB9B10886C5500EEB86D</string>
+				<string>2C2B97C110ACE250007C570A</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>2C72FB9C10886C5500EEB86D</string>
+				<string>2C2B97C210ACE250007C570A</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
@@ -614,7 +614,6 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>2C18E6771087FEFC00C065E2</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/tkurita/Dev/Projects/HelpBookOSAX/trunk/HelpBook.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -697,7 +696,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>2C18E6771087FEFC00C065E2</string>
-				<string>2C72FBA910886C7D00EEB86D</string>
+				<string>2C2B97C310ACE250007C570A</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

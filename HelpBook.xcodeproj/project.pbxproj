@@ -13,7 +13,7 @@
 		2C18E6A71088000200C065E2 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
 		2C18E6A81088000200C065E2 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C72FD2D095819360091C86F /* Carbon.framework */; };
 		2C18E6A91088000200C065E2 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C72FEAA095838150091C86F /* ApplicationServices.framework */; };
-		2C18E6AC1088000200C065E2 /* Scripting.r in Rez */ = {isa = PBXBuildFile; fileRef = 2C72FFB109583F760091C86F /* Scripting.r */; };
+		2C18E6AC1088000200C065E2 /* HelpBook.r in Rez */ = {isa = PBXBuildFile; fileRef = 2C72FFB109583F760091C86F /* HelpBook.r */; };
 		2C72FD2E095819360091C86F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C72FD2D095819360091C86F /* Carbon.framework */; };
 		2C72FD31095819440091C86F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C72FD30095819440091C86F /* main.c */; };
 		2C72FE82095836670091C86F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
@@ -21,10 +21,10 @@
 		2C72FE850958366C0091C86F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C72FD30095819440091C86F /* main.c */; };
 		2C72FEAB095838150091C86F /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C72FEAA095838150091C86F /* ApplicationServices.framework */; };
 		2C72FEAC095838150091C86F /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C72FEAA095838150091C86F /* ApplicationServices.framework */; };
-		2C72FFB509583FB90091C86F /* Scripting.r in Rez */ = {isa = PBXBuildFile; fileRef = 2C72FFB109583F760091C86F /* Scripting.r */; };
+		2C72FFB509583FB90091C86F /* HelpBook.r in Rez */ = {isa = PBXBuildFile; fileRef = 2C72FFB109583F760091C86F /* HelpBook.r */; };
 		2C76E22A09EA1DB6000CC37E /* HelpBookHandlers.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */; };
 		2C76E22B09EA1DB6000CC37E /* HelpBookHandlers.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */; };
-		2CB6DAB709591BA0009A18B4 /* Scripting.r in Rez */ = {isa = PBXBuildFile; fileRef = 2C72FFB109583F760091C86F /* Scripting.r */; };
+		2CB6DAB709591BA0009A18B4 /* HelpBook.r in Rez */ = {isa = PBXBuildFile; fileRef = 2C72FFB109583F760091C86F /* HelpBook.r */; };
 		2CCF2A560BAA7EE900A6496C /* AEUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF2A540BAA7EE900A6496C /* AEUtils.c */; };
 		2CCF2A570BAA7EE900A6496C /* AEUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF2A540BAA7EE900A6496C /* AEUtils.c */; };
 		8D576314048677EA00EA77CD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
@@ -40,7 +40,7 @@
 		2C72FDC1095836400091C86F /* HelpBook App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelpBook App-Info.plist"; sourceTree = "<group>"; };
 		2C72FEAA095838150091C86F /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
 		2C72FFAF09583F670091C86F /* HelpBook.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.sdef; path = HelpBook.sdef; sourceTree = "<group>"; };
-		2C72FFB109583F760091C86F /* Scripting.r */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; path = Scripting.r; sourceTree = "<group>"; };
+		2C72FFB109583F760091C86F /* HelpBook.r */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; path = HelpBook.r; sourceTree = "<group>"; };
 		2C76E22809EA1DB6000CC37E /* HelpBookHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpBookHandlers.h; sourceTree = "<group>"; };
 		2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HelpBookHandlers.c; sourceTree = "<group>"; };
 		2CCF2A540BAA7EE900A6496C /* AEUtils.c */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.c.c; path = AEUtils.c; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 				2C72FDC1095836400091C86F /* HelpBook App-Info.plist */,
 				8D576317048677EA00EA77CD /* Info.plist */,
 				2C18E6B11088000200C065E2 /* Info_10_5.plist */,
-				2C72FFB109583F760091C86F /* Scripting.r */,
+				2C72FFB109583F760091C86F /* HelpBook.r */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -153,10 +153,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C18E6AD1088000200C065E2 /* Build configuration list for PBXNativeTarget "HelpBook for 10.5" */;
 			buildPhases = (
+				2C18E6AA1088000200C065E2 /* ShellScript */,
 				2C18E6A11088000200C065E2 /* Resources */,
 				2C18E6A21088000200C065E2 /* Sources */,
 				2C18E6A61088000200C065E2 /* Frameworks */,
-				2C18E6AA1088000200C065E2 /* ShellScript */,
 				2C18E6AB1088000200C065E2 /* Rez */,
 			);
 			buildRules = (
@@ -191,10 +191,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB911A08733D790010E9CD /* Build configuration list for PBXNativeTarget "HelpBook" */;
 			buildPhases = (
+				2C58596D0BAFA27100D46AD8 /* ShellScript */,
 				8D57630F048677EA00EA77CD /* Resources */,
 				8D576311048677EA00EA77CD /* Sources */,
 				8D576313048677EA00EA77CD /* Frameworks */,
-				2C58596D0BAFA27100D46AD8 /* ShellScript */,
 				2CB6DAA209591B9A009A18B4 /* Rez */,
 			);
 			buildRules = (
@@ -255,7 +255,7 @@
 			isa = PBXRezBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C18E6AC1088000200C065E2 /* Scripting.r in Rez */,
+				2C18E6AC1088000200C065E2 /* HelpBook.r in Rez */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +263,7 @@
 			isa = PBXRezBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C72FFB509583FB90091C86F /* Scripting.r in Rez */,
+				2C72FFB509583FB90091C86F /* HelpBook.r in Rez */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +271,7 @@
 			isa = PBXRezBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CB6DAB709591BA0009A18B4 /* Scripting.r in Rez */,
+				2CB6DAB709591BA0009A18B4 /* HelpBook.r in Rez */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,11 +287,11 @@
 				"$(SRCROOT)/HelpBook.sdef",
 			);
 			outputPaths = (
-				"$(SRCROOT)/Scripting.r",
+				"$(SRCROOT)/HelpBook.r",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/bin/sdp -f a -o ${SRCROOT}/Scripting.r HelpBook.sdef";
+			shellScript = "/usr/bin/sdp -f a -o ${SRCROOT}/HelpBook.r HelpBook.sdef";
 		};
 		2C58596D0BAFA27100D46AD8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -302,11 +302,11 @@
 				"$(SRCROOT)/HelpBook.sdef",
 			);
 			outputPaths = (
-				"$(SRCROOT)/Scripting.r",
+				"$(SRCROOT)/HelpBook.r",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/bin/sdp -f a -o ${SRCROOT}/Scripting.r HelpBook.sdef";
+			shellScript = "/usr/bin/sdp -f a -o ${SRCROOT}/HelpBook.r HelpBook.sdef";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -348,7 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -364,7 +364,7 @@
 		1DEB911C08733D790010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
@@ -405,7 +405,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -422,7 +422,7 @@
 		2C18E6AF1088000200C065E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info_10_5.plist;
