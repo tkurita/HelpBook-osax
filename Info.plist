@@ -50,6 +50,15 @@
 				<key>Context</key>
 				<string>Process</string>
 			</dict>
+			<key>HBsuVers</key>
+			<dict>
+				<key>Handler</key>
+				<string>versionHandler</string>
+				<key>ThreadSafe</key>
+				<true/>
+				<key>Context</key>
+				<string>Machine</string>
+			</dict>
 		</dict>
 	</dict>
 </dict>

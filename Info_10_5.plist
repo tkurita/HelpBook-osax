@@ -36,6 +36,8 @@
 			<string>registerHelpBookHandler</string>
 			<key>HBsushHB</key>
 			<string>showHelpBookHandler</string>
+			<key>HBsuVers</key>
+			<string>versionHandler</string>
 		</dict>
 	</dict>
 </dict>
