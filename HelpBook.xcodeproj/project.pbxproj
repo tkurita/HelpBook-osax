@@ -14,6 +14,8 @@
 		2C18E6A81088000200C065E2 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C72FD2D095819360091C86F /* Carbon.framework */; };
 		2C18E6A91088000200C065E2 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C72FEAA095838150091C86F /* ApplicationServices.framework */; };
 		2C18E6AC1088000200C065E2 /* HelpBook.r in Rez */ = {isa = PBXBuildFile; fileRef = 2C72FFB109583F760091C86F /* HelpBook.r */; };
+		2C2B97D510ACE38A007C570A /* HelpBook.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 2C72FFAF09583F670091C86F /* HelpBook.sdef */; };
+		2C2B97E010ACE504007C570A /* HelpBook.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 2C72FFAF09583F670091C86F /* HelpBook.sdef */; };
 		2C72FD2E095819360091C86F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C72FD2D095819360091C86F /* Carbon.framework */; };
 		2C72FD31095819440091C86F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C72FD30095819440091C86F /* main.c */; };
 		2C72FE82095836670091C86F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
@@ -34,6 +36,7 @@
 		0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		2C18E6B01088000200C065E2 /* HelpBook.osax */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelpBook.osax; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C18E6B11088000200C065E2 /* Info_10_5.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_10_5.plist; sourceTree = "<group>"; };
+		2C2B97CE10ACE2CB007C570A /* testscript.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; path = testscript.scpt; sourceTree = "<group>"; };
 		2C72FD2D095819360091C86F /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		2C72FD30095819440091C86F /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		2C72FDBF095836400091C86F /* HelpBook App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelpBook App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +89,7 @@
 		089C166AFE841209C02AAC07 /* UnEscapeURL */ = {
 			isa = PBXGroup;
 			children = (
+				2C2B97CE10ACE2CB007C570A /* testscript.scpt */,
 				2CCF2A530BAA7EE900A6496C /* AEUtils */,
 				08FB77AFFE84173DC02AAC07 /* Source */,
 				089C167CFE841241C02AAC07 /* Resources */,
@@ -177,6 +181,7 @@
 				2C72FDBC095836400091C86F /* Sources */,
 				2C72FDBD095836400091C86F /* Frameworks */,
 				2C72FFB209583FAC0091C86F /* Rez */,
+				2C47DF9010B13F4A002ADC14 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -231,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2B97D510ACE38A007C570A /* HelpBook.sdef in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2B97E010ACE504007C570A /* HelpBook.sdef in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +286,21 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		2C18E6AA1088000200C065E2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/HelpBook.sdef",
+			);
+			outputPaths = (
+				"$(SRCROOT)/HelpBook.r",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/bin/sdp -f a -o ${SRCROOT}/HelpBook.r HelpBook.sdef";
+		};
+		2C47DF9010B13F4A002ADC14 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,7 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -364,7 +386,7 @@
 		1DEB911C08733D790010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
@@ -405,7 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -422,7 +444,7 @@
 		2C18E6AF1088000200C065E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info_10_5.plist;

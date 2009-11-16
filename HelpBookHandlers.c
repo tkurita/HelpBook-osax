@@ -21,9 +21,8 @@ void showFSRefPath(const FSRef *ref_p)
 }
 
 #pragma mark main routines
-OSStatus getMainBundleRef(FSRef *ref_p, CFBundleRef *bundleRef_p)
+OSStatus CopyMainBundleRef(FSRef *ref_p, CFURLRef *bundleURL_p, CFBundleRef *bundleRef_p)
 {
-	CFURLRef myBundleURL= NULL;
 	OSStatus err = noErr;
 	
 	*bundleRef_p = CFBundleGetMainBundle();
@@ -33,38 +32,124 @@ OSStatus getMainBundleRef(FSRef *ref_p, CFBundleRef *bundleRef_p)
 		goto bail;
 	}
 		
-	myBundleURL = CFBundleCopyBundleURL(*bundleRef_p);// 2
-	if (myBundleURL == NULL) {
+	*bundleURL_p = CFBundleCopyBundleURL(*bundleRef_p);// 2
+	if (*bundleURL_p == NULL) {
 		err = fnfErr; 
 		//printf("error at CFBundleCopyBundleURL\n");
 		goto bail;
 	}
-#if useLog
-	CFShow(myBundleURL);
-#endif
 	
-	if (!CFURLGetFSRef(myBundleURL, ref_p)) {
+	if (!CFURLGetFSRef(*bundleURL_p, ref_p)) {
 		err = fnfErr;
 		//printf("error at CFURLGetFSRef\n");
 	}
 bail:
-	CFRelease(myBundleURL);
 	return err;
+}
+
+void WritePropertyListToFile(CFPropertyListRef propertyList,
+							   CFURLRef fileURL ) {
+	CFDataRef xmlData;
+	Boolean status;
+	SInt32 errorCode;
+	
+	// Convert the property list into XML data.
+	xmlData = CFPropertyListCreateXMLData( kCFAllocatorDefault, propertyList );
+	
+	// Write the XML data to the file.
+	status = CFURLWriteDataAndPropertiesToResource(
+													fileURL,                  // URL to use
+													xmlData,                  // data to write
+													NULL,
+													&errorCode);
+	
+	CFRelease(xmlData);
+}
+
+CFPropertyListRef CFPropertyListCreateFromFile(CFURLRef fileURL) {
+	CFPropertyListRef propertyList = NULL;
+	CFStringRef       errorString;
+	CFDataRef         resourceData = NULL;
+	Boolean           status;
+	SInt32            errorCode;
+	
+	// Read the XML file.
+	status = CFURLCreateDataAndPropertiesFromResource(kCFAllocatorDefault,
+													  fileURL,
+													  &resourceData,            // place to put file data
+													  NULL,
+													  NULL,
+													  &errorCode);
+	if (!status) goto bail;
+	// Reconstitute the dictionary using the XML data.
+	propertyList = CFPropertyListCreateFromXMLData(kCFAllocatorDefault,
+												   resourceData,
+												   kCFPropertyListMutableContainers,
+												   &errorString);
+	
+bail:
+	safeRelease( resourceData );
+	return propertyList;
+}
+
+Boolean recoverInfoPlist(CFBundleRef bundle, CFURLRef bundleURL)
+{
+	Boolean result = false;
+	CFURLRef recover_file_url = NULL;
+	CFMutableDictionaryRef recover_plist = NULL;
+	CFURLRef infoPlist_url = NULL;
+	CFMutableDictionaryRef current_plist = NULL;
+	
+	recover_file_url = CFBundleCopyResourceURL(bundle,
+											   CFSTR("recover-Info"),
+											   CFSTR("plist"),
+											   NULL);
+	if (!recover_file_url) goto bail;
+	
+	recover_plist = (CFMutableDictionaryRef)CFPropertyListCreateFromFile(recover_file_url);
+	if (!recover_plist) goto bail;
+	
+	infoPlist_url = CFURLCreateCopyAppendingPathComponent(NULL,
+														   bundleURL,
+														   CFSTR("Contents/Info.plist"),
+														   false);
+	current_plist = (CFMutableDictionaryRef)CFPropertyListCreateFromFile(infoPlist_url);
+	
+	if (!current_plist) {
+		current_plist = recover_plist;
+		CFRetain(current_plist);
+	} else {
+		CFIndex n_val = CFDictionaryGetCount(recover_plist);
+		CFTypeRef *keys;
+		CFTypeRef *values;
+		CFDictionaryGetKeysAndValues(recover_plist, keys, values);
+		for (int n = 0; n < n_val; n++) {
+			CFDictionaryAddValue(current_plist, keys[n], values[n]);
+		}
+	}
+	WritePropertyListToFile(current_plist, infoPlist_url);
+	CFRelease(current_plist);
+	result = true;
+bail:
+	safeRelease(infoPlist_url);
+	safeRelease(recover_file_url);
+	return result;
 }
 
 OSErr registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
 {	
 	OSErr err = noErr;
-	FSRef bundleFSRef;
-	CFBundleRef bundleRef = NULL;
+	FSRef bundle_ref;
+	CFBundleRef bundle = NULL;
+	CFURLRef bundle_url = NULL;
 	
-	err = getFSRef(ev, keyDirectObject, &bundleFSRef);
+	err = getFSRef(ev, keyDirectObject, &bundle_ref);
 	
 	switch (err) {
         case -1701: 
-			err = getMainBundleRef(&bundleFSRef, &bundleRef);
+			err = CopyMainBundleRef(&bundle_ref, &bundle_url, &bundle);
 			if (err == noErr) {
-				CFRetain(bundleRef);
+				CFRetain(bundle);
 				break;
 			}
         case noErr:
@@ -74,50 +159,39 @@ OSErr registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
     }
 	
 #if useLog	
-	showFSRefPath(&bundleFSRef);
-#endif	
-	err = AHRegisterHelpBook(&bundleFSRef);
+	showFSRefPath(&bundle_ref);
+#endif
+	err = AHRegisterHelpBook(&bundle_ref);
 	
 	if (err != noErr) {
-		goto bail;
+		Boolean try_recover = false;
+		getBoolValue(ev, 'rcIP',  &try_recover);
+		if (try_recover) {
+			if (!bundle) {
+				bundle_url = CFURLCreateFromFSRef(NULL, &bundle_ref);
+				bundle = CFBundleCreate(NULL, bundle_url);
+			}
+			
+			if (recoverInfoPlist(bundle, bundle_url)){
+				CFRelease(bundle); bundle = NULL; // to notify the bundle was updated.
+				err = AHRegisterHelpBook(&bundle_ref);
+			}
+		}
+		if (err != noErr) goto bail;
 	}
 	
-	if (bundleRef == NULL) {
-		CFURLRef urlRef = CFURLCreateFromFSRef(NULL, &bundleFSRef);
-		bundleRef = CFBundleCreate(NULL,urlRef);
-		CFRelease(urlRef);
+	if (bundle == NULL) {
+		bundle_url = CFURLCreateFromFSRef(NULL, &bundle_ref);
+		bundle = CFBundleCreate(NULL, bundle_url);
 	}
 	
-	CFStringRef tmpBookName = NULL;
-	tmpBookName = CFBundleGetValueForInfoDictionaryKey(bundleRef, CFSTR("CFBundleHelpBookName"));
-	// get rule: owner of bookName is not myself. don't release
-	*bookName = CFStringCreateCopy(NULL, tmpBookName);
+	*bookName = CFBundleGetValueForInfoDictionaryKey(bundle, CFSTR("CFBundleHelpBookName"));
+	CFRetain(*bookName);
 bail:
-	safeRelease(bundleRef);
-	
+	safeRelease(bundle);
+	safeRelease(bundle_url);
 	return err;
 }
-
-/* replaced by putStringToReply
-OSErr setupReplyForString(CFStringRef inText, AppleEvent *reply)
-{
-	OSErr err = noErr;
-	char buffer[MAXPATHLEN+1];
-	CFStringGetCString(inText, buffer, MAXPATHLEN+1, kCFStringEncodingUTF8);
-	AEDesc resultDesc;
-	err=AECreateDesc (typeUTF8Text, buffer, strlen(buffer), &resultDesc);
-	
-	if (err != noErr) goto bail;
-	
-	err=AEPutParamDesc(reply, keyAEResult,&resultDesc);
-	if (err != noErr) {
-		AEDisposeDesc(&resultDesc);
-	}
-	
-bail:
-		return err;
-}
-*/
 
 #pragma mark functions to install AppleEvent Managers
 OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon)
@@ -132,12 +206,10 @@ OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon r
 	if (err != noErr) goto bail;
 	
 	if (bookName != NULL) {
-		//err = setupReplyForString(bookName, reply);
-		err = putStringToReply(bookName, typeUnicodeText, reply);
+		err = putStringToEvent(reply, keyAEResult, bookName, typeUnicodeText);
 	}
 	
 bail:
-		
 	safeRelease(bookName);
 	--gAdditionReferenceCount;
 	return err;
@@ -157,8 +229,7 @@ OSErr showHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refco
 	if (bookName != NULL) {
 		err = AHGotoPage(bookName, NULL, NULL);
 		if (err != noErr) goto bail;
-		//err = setupReplyForString(bookName, reply);
-		err = putStringToReply(bookName, typeUnicodeText, reply);
+		err = putStringToEvent(reply, keyAEResult, bookName, typeUnicodeText);
 	}
 	
 bail:

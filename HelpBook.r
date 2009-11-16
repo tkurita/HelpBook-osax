@@ -33,7 +33,10 @@ resource 'aete' (0, "HelpBook Terminology") {
 			directParamOptional,
 			singleItem, notEnumerated, Reserved13,
 			{
-
+				"recovering InfoPlist", 'rcIP', 'bool',
+				"recover Info.plist from recover-Info.plist if ewquired.",
+				optional,
+				singleItem, notEnumerated, Reserved13
 			},
 
 			"show helpbook",
@@ -47,7 +50,10 @@ resource 'aete' (0, "HelpBook Terminology") {
 			directParamOptional,
 			singleItem, notEnumerated, Reserved13,
 			{
-
+				"recovering InfoPlist", 'rcIP', 'bool',
+				"recover Info.plist from recover-Info.plist if ewquired.",
+				optional,
+				singleItem, notEnumerated, Reserved13
 			}
 		},
 		{
