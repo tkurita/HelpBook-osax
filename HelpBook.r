@@ -54,6 +54,17 @@ resource 'aete' (0, "HelpBook Terminology") {
 				"recover Info.plist from recover-Info.plist if ewquired.",
 				optional,
 				singleItem, notEnumerated, Reserved13
+			},
+
+			"HelpBookOSAX version",
+			"version string of HelpBook.osax",
+			'HBsu', 'Vers',
+			'TEXT',
+			"",
+			replyRequired, singleItem, notEnumerated, Reserved13,
+			dp_none__,
+			{
+
 			}
 		},
 		{

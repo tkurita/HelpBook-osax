@@ -17,7 +17,6 @@
 		2C2B97D510ACE38A007C570A /* HelpBook.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 2C72FFAF09583F670091C86F /* HelpBook.sdef */; };
 		2C2B97E010ACE504007C570A /* HelpBook.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 2C72FFAF09583F670091C86F /* HelpBook.sdef */; };
 		2C72FD2E095819360091C86F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C72FD2D095819360091C86F /* Carbon.framework */; };
-		2C72FD31095819440091C86F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C72FD30095819440091C86F /* main.c */; };
 		2C72FE82095836670091C86F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
 		2C72FE83095836670091C86F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C72FD2D095819360091C86F /* Carbon.framework */; };
 		2C72FE850958366C0091C86F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C72FD30095819440091C86F /* main.c */; };
@@ -37,6 +36,7 @@
 		2C18E6B01088000200C065E2 /* HelpBook.osax */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelpBook.osax; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C18E6B11088000200C065E2 /* Info_10_5.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_10_5.plist; sourceTree = "<group>"; };
 		2C2B97CE10ACE2CB007C570A /* testscript.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; path = testscript.scpt; sourceTree = "<group>"; };
+		2C47E00D10B18D42002ADC14 /* HelpBookOSAXConsntatns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpBookOSAXConsntatns.h; sourceTree = "<group>"; };
 		2C72FD2D095819360091C86F /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		2C72FD30095819440091C86F /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		2C72FDBF095836400091C86F /* HelpBook App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelpBook App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +127,7 @@
 				2C72FD30095819440091C86F /* main.c */,
 				2C76E22809EA1DB6000CC37E /* HelpBookHandlers.h */,
 				2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */,
+				2C47E00D10B18D42002ADC14 /* HelpBookOSAXConsntatns.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -357,7 +358,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C72FD31095819440091C86F /* main.c in Sources */,
 				2C76E22A09EA1DB6000CC37E /* HelpBookHandlers.c in Sources */,
 				2CCF2A560BAA7EE900A6496C /* AEUtils.c in Sources */,
 			);

@@ -1,10 +1,11 @@
 #include "HelpBookHandlers.h"
 #include <sys/param.h>
 #include "AEUtils/AEUtils.h"
+#include "HelpBookOSAXConsntatns.h"
 
 #define useLog 0
 
-extern UInt32 gAdditionReferenceCount;
+UInt32 gAdditionReferenceCount = 0;
 
 #pragma mark functions for debugging
 void showFSRefPath(const FSRef *ref_p)
@@ -21,6 +22,17 @@ void showFSRefPath(const FSRef *ref_p)
 }
 
 #pragma mark main routines
+OSErr versionHandler(const AppleEvent *ev, AppleEvent *reply, long refcon)
+{
+	OSErr err;
+	CFBundleRef	bundle = CFBundleGetBundleWithIdentifier(BUNDLE_ID);
+	CFDictionaryRef info = CFBundleGetInfoDictionary(bundle);
+	
+	CFStringRef vers = CFDictionaryGetValue(info, CFSTR("CFBundleShortVersionString"));
+	err = putStringToEvent(reply, keyAEResult, vers, kCFStringEncodingUnicode);
+	return err;
+}
+
 OSStatus CopyMainBundleRef(FSRef *ref_p, CFURLRef *bundleURL_p, CFBundleRef *bundleRef_p)
 {
 	OSStatus err = noErr;
@@ -165,7 +177,7 @@ OSErr registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
 	
 	if (err != noErr) {
 		Boolean try_recover = false;
-		getBoolValue(ev, 'rcIP',  &try_recover);
+		getBoolValue(ev, kReccoverParam,  &try_recover);
 		if (try_recover) {
 			if (!bundle) {
 				bundle_url = CFURLCreateFromFSRef(NULL, &bundle_ref);

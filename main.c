@@ -1,11 +1,8 @@
 #include "HelpBookHandlers.h"
+#include "HelpBookOSAXConsntatns.h"
 
-#define kHelpBookSuite  'HBsu'
-#define kRegisterHelpBookEvent	'rgHB'
-#define kShowHelpBookEvent 'shHB'
-
-UInt32			gAdditionReferenceCount = 0;
-CFBundleRef		gAdditionBundle;
+extern UInt32 gAdditionReferenceCount;
+CFBundleRef gAdditionBundle;
 
 // =============================================================================
 // == Entry points.
@@ -41,7 +38,8 @@ typedef struct AEEventHandlerInfo AEEventHandlerInfo;
 
 static const AEEventHandlerInfo gEventInfo[] = {
 	{ kHelpBookSuite, kRegisterHelpBookEvent, registerHelpBookHandler },
-	{ kHelpBookSuite, kShowHelpBookEvent, showHelpBookHandler }
+	{ kHelpBookSuite, kShowHelpBookEvent, showHelpBookHandler },
+	{ kHelpBookSuite, kVersionEvent, versionHandler },
 };
 
 #define kEventHandlerCount  (sizeof(gEventInfo) / sizeof(AEEventHandlerInfo))
