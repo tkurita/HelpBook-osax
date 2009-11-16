@@ -26,6 +26,8 @@
 	<string>osax</string>
 	<key>CFBundleSignature</key>
 	<string>ascr</string>
+	<key>OSAScriptingDefinition</key>
+	<string>${PRODUCT_NAME}.sdef</string>
 	<key>CSResourcesFileMapped</key>
 	<true/>
 	<key>OSAXHandlers</key>

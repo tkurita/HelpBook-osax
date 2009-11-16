@@ -205,6 +205,7 @@ bail:
 	return err;
 }
 
+
 #pragma mark functions to install AppleEvent Managers
 OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon)
 {	
@@ -215,7 +216,23 @@ OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon r
 	OSErr err = noErr;
 	CFStringRef bookName = NULL;
 	err = registerHelpBook(ev, &bookName);
-	if (err != noErr) goto bail;
+	CFStringRef path = NULL;
+	CFStringRef msg = NULL;
+	
+	switch (err) {
+		case noErr:
+			break;
+		case -50:
+			path = CFStringCreateWithEvent(ev, keyDirectObject, &err);
+			msg = CFStringCreateWithFormat(NULL, NULL, CFSTR("Failed to register HelpBook for %@."),
+													   path);
+			putStringToEvent(reply, keyErrorString, msg, kCFStringEncodingUTF8);
+			CFRelease(path);
+			CFRelease(msg);
+			err = 1850;
+		default:
+			goto bail;
+	}
 	
 	if (bookName != NULL) {
 		err = putStringToEvent(reply, keyAEResult, bookName, typeUnicodeText);
@@ -236,7 +253,23 @@ OSErr showHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refco
 	OSErr err = noErr;
 	CFStringRef bookName = NULL;
 	err = registerHelpBook(ev, &bookName);
-	if (err != noErr) goto bail;
+	CFStringRef path = NULL;
+	CFStringRef msg = NULL;
+	
+	switch (err) {
+		case noErr:
+			break;
+		case -50:
+			path = CFStringCreateWithEvent(ev, keyDirectObject, &err);
+			msg = CFStringCreateWithFormat(NULL, NULL, CFSTR("Failed to register HelpBook for %@."),
+										   path);
+			putStringToEvent(reply, keyErrorString, msg, kCFStringEncodingUTF8);
+			CFRelease(path);
+			CFRelease(msg);
+			err = 1850;
+		default:
+			goto bail;
+	}
 	
 	if (bookName != NULL) {
 		err = AHGotoPage(bookName, NULL, NULL);
@@ -245,7 +278,6 @@ OSErr showHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refco
 	}
 	
 bail:
-		
 	safeRelease(bookName);
 	--gAdditionReferenceCount;
 	return err;
