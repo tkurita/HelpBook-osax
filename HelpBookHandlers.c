@@ -117,7 +117,6 @@ Boolean recoverInfoPlist(CFBundleRef bundle, CFURLRef bundleURL)
 											   CFSTR("plist"),
 											   NULL);
 	if (!recover_file_url) goto bail;
-	
 	recover_plist = (CFMutableDictionaryRef)CFPropertyListCreateFromFile(recover_file_url);
 	if (!recover_plist) goto bail;
 	
@@ -125,6 +124,7 @@ Boolean recoverInfoPlist(CFBundleRef bundle, CFURLRef bundleURL)
 														   bundleURL,
 														   CFSTR("Contents/Info.plist"),
 														   false);
+
 	current_plist = (CFMutableDictionaryRef)CFPropertyListCreateFromFile(infoPlist_url);
 	
 	if (!current_plist) {
@@ -132,8 +132,8 @@ Boolean recoverInfoPlist(CFBundleRef bundle, CFURLRef bundleURL)
 		CFRetain(current_plist);
 	} else {
 		CFIndex n_val = CFDictionaryGetCount(recover_plist);
-		CFTypeRef *keys;
-		CFTypeRef *values;
+		CFTypeRef keys[n_val];
+		CFTypeRef values[n_val];
 		CFDictionaryGetKeysAndValues(recover_plist, keys, values);
 		for (int n = 0; n < n_val; n++) {
 			CFDictionaryAddValue(current_plist, keys[n], values[n]);
@@ -187,6 +187,10 @@ OSErr registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
 			if (recoverInfoPlist(bundle, bundle_url)){
 				CFRelease(bundle); bundle = NULL; // to notify the bundle was updated.
 				err = AHRegisterHelpBook(&bundle_ref);
+				if (err != noErr) {
+					err = 1851;
+					goto bail;
+				}
 			}
 		}
 		if (err != noErr) goto bail;
@@ -213,27 +217,33 @@ void setupErrorString(const AppleEvent *ev, AppleEvent *reply, OSErr err)
 	CFURLRef file_url = NULL;
 	CFStringRef path = NULL;
 	CFStringRef msg = NULL;
+	CFStringRef template = NULL;
+	
+	if (err == noErr) return;
 	
 	switch (err) {
-		case noErr:
-			break;
 		case -50:
-			file_url = CFURLCreateWithEvent(ev, keyDirectObject, &err);
-			if (file_url) {
-				path = CFURLCopyFileSystemPath(file_url, kCFURLHFSPathStyle);
-			}
-			if ((err == noErr) && path) {
-				msg = CFStringCreateWithFormat(NULL, NULL, CFSTR("Failed to register HelpBook for %@ ."),
-											   path);
-				putStringToEvent(reply, keyErrorString, msg, kCFStringEncodingUTF8);
-				CFRelease(msg);
-			}
-			safeRelease(path);
-			safeRelease(file_url);
+			template = CFSTR("Failed to register HelpBook for \n\"%@\".");
 			err = 1850;
+			break;
+		case 1851:
+			template = CFSTR("Succeeded in recovering Info.plist but failed to register HelpBook for \n\"%@\" .\n\n You may need to relaunch the application.");
 		default:
 			break;
 	}
+	
+	 file_url = CFURLCreateWithEvent(ev, keyDirectObject, &err);
+	 if (file_url) {
+		 path = CFURLCopyFileSystemPath(file_url, kCFURLHFSPathStyle);
+	 }
+	 if ((err == noErr) && path) {
+		 msg = CFStringCreateWithFormat(NULL, NULL, template, path);
+		 putStringToEvent(reply, keyErrorString, msg, kCFStringEncodingUTF8);
+		 CFRelease(msg);
+	 }
+	 safeRelease(path);
+	 safeRelease(file_url);
+	 
 }
 
 OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon)
