@@ -207,6 +207,35 @@ bail:
 
 
 #pragma mark functions to install AppleEvent Managers
+
+void setupErrorString(const AppleEvent *ev, AppleEvent *reply, OSErr err)
+{
+	CFURLRef file_url = NULL;
+	CFStringRef path = NULL;
+	CFStringRef msg = NULL;
+	
+	switch (err) {
+		case noErr:
+			break;
+		case -50:
+			file_url = CFURLCreateWithEvent(ev, keyDirectObject, &err);
+			if (file_url) {
+				path = CFURLCopyFileSystemPath(file_url, kCFURLHFSPathStyle);
+			}
+			if ((err == noErr) && path) {
+				msg = CFStringCreateWithFormat(NULL, NULL, CFSTR("Failed to register HelpBook for %@ ."),
+											   path);
+				putStringToEvent(reply, keyErrorString, msg, kCFStringEncodingUTF8);
+				CFRelease(msg);
+			}
+			safeRelease(path);
+			safeRelease(file_url);
+			err = 1850;
+		default:
+			break;
+	}
+}
+
 OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon)
 {	
 	++gAdditionReferenceCount;
@@ -216,25 +245,10 @@ OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon r
 	OSErr err = noErr;
 	CFStringRef bookName = NULL;
 	err = registerHelpBook(ev, &bookName);
-	CFStringRef path = NULL;
-	CFStringRef msg = NULL;
+
+	setupErrorString(ev, reply, err);
 	
-	switch (err) {
-		case noErr:
-			break;
-		case -50:
-			path = CFStringCreateWithEvent(ev, keyDirectObject, &err);
-			msg = CFStringCreateWithFormat(NULL, NULL, CFSTR("Failed to register HelpBook for %@."),
-													   path);
-			putStringToEvent(reply, keyErrorString, msg, kCFStringEncodingUTF8);
-			CFRelease(path);
-			CFRelease(msg);
-			err = 1850;
-		default:
-			goto bail;
-	}
-	
-	if (bookName != NULL) {
+	if ((err == noErr) && (bookName != NULL)) {
 		err = putStringToEvent(reply, keyAEResult, bookName, typeUnicodeText);
 	}
 	
@@ -253,25 +267,10 @@ OSErr showHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refco
 	OSErr err = noErr;
 	CFStringRef bookName = NULL;
 	err = registerHelpBook(ev, &bookName);
-	CFStringRef path = NULL;
-	CFStringRef msg = NULL;
 	
-	switch (err) {
-		case noErr:
-			break;
-		case -50:
-			path = CFStringCreateWithEvent(ev, keyDirectObject, &err);
-			msg = CFStringCreateWithFormat(NULL, NULL, CFSTR("Failed to register HelpBook for %@."),
-										   path);
-			putStringToEvent(reply, keyErrorString, msg, kCFStringEncodingUTF8);
-			CFRelease(path);
-			CFRelease(msg);
-			err = 1850;
-		default:
-			goto bail;
-	}
+	setupErrorString(ev, reply, err);
 	
-	if (bookName != NULL) {
+	if ((err == noErr) && (bookName != NULL)) {
 		err = AHGotoPage(bookName, NULL, NULL);
 		if (err != noErr) goto bail;
 		err = putStringToEvent(reply, keyAEResult, bookName, typeUnicodeText);

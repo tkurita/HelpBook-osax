@@ -3,16 +3,16 @@
 <dictionary title="HelpBook Terminology">
 	<suite name="HelpBook Suite" code="HBsu" description="Treat Help Books in bundles">
 		<command name="register helpbook" code="HBsurgHB" description="Register a help book in specified bundle.">
-			<direct-parameter description="a bundle path or reference which contains a help book." type="file" optional="yes"/>
-			<parameter name="recovering InfoPlist" code="rcIP" description="recover Info.plist from recover-Info.plist if ewquired." type="boolean" optional="yes"/>
-			<result description="name of the registered help book." type="text"/>
+			<direct-parameter description="A reference to a bundle which contains a help book." type="file" optional="yes"/>
+			<parameter name="recovering InfoPlist" code="rcIP" description="Recover Info.plist from recover-Info.plist in Resources folder, if required." type="boolean" optional="yes"/>
+			<result description="The name of the registered help book." type="text"/>
 		</command>
 		<command name="show helpbook" code="HBsushHB" description="Show a help book in specfied bundle with Help Viewer.">
-			<direct-parameter description="a reference to a bundle which contains a help book." type="file" optional="yes"/>
-			<parameter name="recovering InfoPlist" code="rcIP" description="recover Info.plist from recover-Info.plist if ewquired." type="boolean" optional="yes"/>
-			<result description="name of the registered help book." type="text"/>
+			<direct-parameter description="A reference to a bundle which contains a help book." type="file" optional="yes"/>
+			<parameter name="recovering InfoPlist" code="rcIP" description="Recover Info.plist from recover-Info.plist in Resources folder, if ewquired." type="boolean" optional="yes"/>
+			<result description="The name of the registered help book." type="text"/>
 		</command>
-		<command name="HelpBookOSAX version" code="HBsuVers" description="version string of HelpBook.osax">
+		<command name="HelpBookOSAX version" code="HBsuVers" description="Version string of HelpBook.osax">
 			<result type="text"/>
 		</command>
 	</suite>
