@@ -214,10 +214,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>2C40263710B4367000BBF1B5</string>
+						<string>2C5B39C010B78654004396E4</string>
 						<key>history</key>
 						<array>
-							<string>2C2FAFA910B4192600293581</string>
+							<string>2C40267C10B4CFBE00BBF1B5</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -271,6 +271,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -320,8 +322,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>20</integer>
-									<integer>17</integer>
+									<integer>8</integer>
+									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -375,12 +377,12 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C40263510B4367000BBF1B5</string>
+										<string>2C5B39B610B78654004396E4</string>
 										<key>history</key>
 										<array>
 											<string>2C47DF7810B13DE1002ADC14</string>
 											<string>2C2FAF8F10B4121C00293581</string>
-											<string>2C2FAFA710B4192600293581</string>
+											<string>2C40267710B4CFBE00BBF1B5</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -406,8 +408,6 @@
 							<string>170pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -425,22 +425,25 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C40263610B4367000BBF1B5</string>
+										<string>2C5B39BD10B78654004396E4</string>
 										<key>history</key>
 										<array>
 											<string>2C47DF7810B13DE1002ADC14</string>
-											<string>2C4025AA10B41B7200BBF1B5</string>
 											<string>2C4025D910B41D9F00BBF1B5</string>
-											<string>2C40262B10B4333100BBF1B5</string>
+											<string>2C40266B10B4CDDE00BBF1B5</string>
+											<string>2C5B39B710B78654004396E4</string>
+											<string>2C5B39B810B78654004396E4</string>
+											<string>2C5B39B910B78654004396E4</string>
 										</array>
 										<key>prevStack</key>
 										<array>
 											<string>2C2FAF8C10B411F600293581</string>
 											<string>2C4025AC10B41B7200BBF1B5</string>
-											<string>2C4025B510B41B9B00BBF1B5</string>
 											<string>2C4025CD10B41CE800BBF1B5</string>
-											<string>2C4025D410B41D5F00BBF1B5</string>
-											<string>2C4025DB10B41D9F00BBF1B5</string>
+											<string>2C40266F10B4CDDE00BBF1B5</string>
+											<string>2C5B39BA10B78654004396E4</string>
+											<string>2C5B39BB10B78654004396E4</string>
+											<string>2C5B39BC10B78654004396E4</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -499,9 +502,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2C40259610B4194B00BBF1B5</string>
+				<string>2C5B39BE10B78654004396E4</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>2C40259710B4194B00BBF1B5</string>
+				<string>2C5B39BF10B78654004396E4</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
@@ -634,13 +637,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D57069F1CE1000CFCEE</string>
-		<string>2C4025B010B41B7200BBF1B5</string>
-		<string>2C4025B110B41B7200BBF1B5</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>2C47DF7E10B13DE1002ADC14</string>
-		<string>2C18E6771087FEFC00C065E2</string>
 		<string>/Users/tkurita/Dev/Projects/HelpBookOSAX/trunk/HelpBook.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

@@ -136,7 +136,7 @@ Boolean recoverInfoPlist(CFBundleRef bundle, CFURLRef bundleURL)
 		CFTypeRef values[n_val];
 		CFDictionaryGetKeysAndValues(recover_plist, keys, values);
 		for (int n = 0; n < n_val; n++) {
-			CFDictionaryAddValue(current_plist, keys[n], values[n]);
+			CFDictionaryAddValue(current_plist, keys[n], values[n]); // if key present, value is not changed.
 		}
 	}
 	WritePropertyListToFile(current_plist, infoPlist_url);
