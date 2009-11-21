@@ -209,13 +209,11 @@ void setupErrorString(const AppleEvent *ev, AppleEvent *reply, OSErr err)
 	if (err == noErr) return;
 	
 	switch (err) {
-		case -50:
-			template = CFSTR("Failed to register HelpBook for \n\"%@\".");
-			err = 1850;
-			break;
 		case 1851:
 			template = CFSTR("Succeeded in recovering Info.plist but failed to register HelpBook for \n\"%@\" .\n\n You may need to relaunch the application.");
+			break;			
 		default:
+			template = CFSTR("Failed to register HelpBook for \n\"%@\".");
 			break;
 	}
 	
