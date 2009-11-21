@@ -16,10 +16,10 @@
 			2C66DC0009DA853900EDC012 /* main.c:32 */,
 			2C81320509E9E92F008E10EB /* main.c:32 */,
 			2C81321009E9E990008E10EB /* main.c:32 */,
-			2C47DFB010B14130002ADC14 /* HelpBookHandlers.c:128 */,
-			2C2FAF4A10B4010900293581 /* HelpBookHandlers.c:280 */,
+			2C47DFB010B14130002ADC14 /* HelpBookHandlers.c:117 */,
+			2C2FAF4A10B4010900293581 /* HelpBookHandlers.c:281 */,
 			2C2FAF6F10B40DEE00293581 /* AEUtils.c:316 */,
-			2C4025FE10B42A5000BBF1B5 /* HelpBookHandlers.c:187 */,
+			2C4025FE10B42A5000BBF1B5 /* HelpBookHandlers.c:176 */,
 		);
 		codeSenseManager = 2C72FCFC095817D30091C86F /* Code sense */;
 		executables = (
@@ -192,6 +192,8 @@
 			2C5B3A0010B78969004396E4 /* PBXTextBookmark */ = 2C5B3A0010B78969004396E4 /* PBXTextBookmark */;
 			2C5B3A0110B78969004396E4 /* PBXTextBookmark */ = 2C5B3A0110B78969004396E4 /* PBXTextBookmark */;
 			2C5B3A0210B78969004396E4 /* PBXTextBookmark */ = 2C5B3A0210B78969004396E4 /* PBXTextBookmark */;
+			2C5B3A1010B78FC1004396E4 /* PBXTextBookmark */ = 2C5B3A1010B78FC1004396E4 /* PBXTextBookmark */;
+			2C5B3A1110B78FC1004396E4 /* PBXTextBookmark */ = 2C5B3A1110B78FC1004396E4 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 2C72FCFB095817D30091C86F /* Source Control */;
 		userBookmarkGroup = 2CCF2A010BAA7ACA00A6496C /* PBXBookmarkGroup */;
@@ -213,7 +215,7 @@
 			sepNavVisRange = "{0, 365}";
 		};
 	};
-	2C2FAF4A10B4010900293581 /* HelpBookHandlers.c:280 */ = {
+	2C2FAF4A10B4010900293581 /* HelpBookHandlers.c:281 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -225,7 +227,7 @@
 		functionName = "showHelpBookHandler()";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 280;
+		lineNumber = 281;
 		location = "HelpBook App";
 		modificationTime = 280239518.078275;
 		state = 1;
@@ -252,7 +254,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 113";
 		rLen = 0;
-		rLoc = 3089;
+		rLoc = 2695;
 		rType = 0;
 		vrLen = 463;
 		vrLoc = 3090;
@@ -262,7 +264,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 221";
 		rLen = 0;
-		rLoc = 5985;
+		rLoc = 6183;
 		rType = 0;
 		vrLen = 744;
 		vrLoc = 5758;
@@ -282,7 +284,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 192";
 		rLen = 0;
-		rLoc = 5294;
+		rLoc = 4900;
 		rType = 0;
 		vrLen = 1358;
 		vrLoc = 1189;
@@ -306,7 +308,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 136";
 		rLen = 0;
-		rLoc = 3839;
+		rLoc = 3445;
 		rType = 0;
 		vrLen = 876;
 		vrLoc = 3181;
@@ -326,7 +328,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 128";
 		rLen = 0;
-		rLoc = 3552;
+		rLoc = 3158;
 		rType = 0;
 		vrLen = 910;
 		vrLoc = 3144;
@@ -351,7 +353,7 @@
 		vrLen = 845;
 		vrLoc = 809;
 	};
-	2C4025FE10B42A5000BBF1B5 /* HelpBookHandlers.c:187 */ = {
+	2C4025FE10B42A5000BBF1B5 /* HelpBookHandlers.c:176 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -363,7 +365,7 @@
 		functionName = "registerHelpBook()";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 187;
+		lineNumber = 176;
 		modificationTime = 280242768.1564299;
 		state = 1;
 	};
@@ -434,7 +436,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 139";
 		rLen = 0;
-		rLoc = 4036;
+		rLoc = 3642;
 		rType = 0;
 		vrLen = 923;
 		vrLoc = 0;
@@ -454,7 +456,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 139";
 		rLen = 0;
-		rLoc = 4036;
+		rLoc = 3642;
 		rType = 0;
 		vrLen = 923;
 		vrLoc = 0;
@@ -474,7 +476,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 196";
 		rLen = 0;
-		rLoc = 5294;
+		rLoc = 4900;
 		rType = 0;
 		vrLen = 1358;
 		vrLoc = 1189;
@@ -496,7 +498,7 @@
 		path = "/Developer/SDKs/MacOSX10.4u.sdk/usr/lib/gcc/powerpc-apple-darwin9/4.0.1/include/stdbool.h";
 		sourceTree = "<absolute>";
 	};
-	2C47DFB010B14130002ADC14 /* HelpBookHandlers.c:128 */ = {
+	2C47DFB010B14130002ADC14 /* HelpBookHandlers.c:117 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -508,7 +510,7 @@
 		functionName = "recoverInfoPlist()";
 		hitCount = 1;
 		ignoreCount = 0;
-		lineNumber = 128;
+		lineNumber = 117;
 		location = "HelpBook App";
 		modificationTime = 280239518.078554;
 		state = 1;
@@ -518,7 +520,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 95";
 		rLen = 7;
-		rLoc = 2847;
+		rLoc = 2453;
 		rType = 0;
 		vrLen = 1287;
 		vrLoc = 1839;
@@ -565,7 +567,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 139";
 		rLen = 0;
-		rLoc = 4036;
+		rLoc = 3642;
 		rType = 0;
 		vrLen = 923;
 		vrLoc = 0;
@@ -585,7 +587,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 139";
 		rLen = 0;
-		rLoc = 4036;
+		rLoc = 3642;
 		rType = 0;
 		vrLen = 923;
 		vrLoc = 0;
@@ -605,7 +607,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 139";
 		rLen = 0;
-		rLoc = 4036;
+		rLoc = 3642;
 		rType = 0;
 		vrLen = 923;
 		vrLoc = 0;
@@ -615,7 +617,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 196";
 		rLen = 0;
-		rLoc = 5294;
+		rLoc = 4900;
 		rType = 0;
 		vrLen = 1358;
 		vrLoc = 1189;
@@ -635,7 +637,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 139";
 		rLen = 0;
-		rLoc = 4036;
+		rLoc = 3642;
 		rType = 0;
 		vrLen = 923;
 		vrLoc = 0;
@@ -645,7 +647,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 196";
 		rLen = 0;
-		rLoc = 5294;
+		rLoc = 4900;
 		rType = 0;
 		vrLen = 1358;
 		vrLoc = 1189;
@@ -665,7 +667,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 139";
 		rLen = 0;
-		rLoc = 4036;
+		rLoc = 3642;
 		rType = 0;
 		vrLen = 923;
 		vrLoc = 0;
@@ -675,7 +677,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 196";
 		rLen = 0;
-		rLoc = 5294;
+		rLoc = 4900;
 		rType = 0;
 		vrLen = 1358;
 		vrLoc = 1189;
@@ -695,7 +697,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 139";
 		rLen = 0;
-		rLoc = 4036;
+		rLoc = 3642;
 		rType = 0;
 		vrLen = 923;
 		vrLoc = 0;
@@ -705,7 +707,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 196";
 		rLen = 0;
-		rLoc = 5294;
+		rLoc = 4900;
 		rType = 0;
 		vrLen = 1358;
 		vrLoc = 1189;
@@ -725,7 +727,7 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 139";
 		rLen = 0;
-		rLoc = 4036;
+		rLoc = 3642;
 		rType = 0;
 		vrLen = 923;
 		vrLoc = 0;
@@ -735,10 +737,30 @@
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		name = "HelpBookHandlers.c: 196";
 		rLen = 0;
-		rLoc = 5294;
+		rLoc = 4900;
 		rType = 0;
 		vrLen = 1358;
 		vrLoc = 1189;
+	};
+	2C5B3A1010B78FC1004396E4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
+		name = "HelpBookHandlers.c: 239";
+		rLen = 27;
+		rLoc = 6262;
+		rType = 0;
+		vrLen = 1352;
+		vrLoc = 5412;
+	};
+	2C5B3A1110B78FC1004396E4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
+		name = "HelpBookHandlers.c: 185";
+		rLen = 0;
+		rLoc = 4900;
+		rType = 0;
+		vrLen = 1452;
+		vrLoc = 968;
 	};
 	2C66DC0009DA853900EDC012 /* main.c:32 */ = {
 		isa = PBXFileBreakpoint;
@@ -856,9 +878,9 @@
 	};
 	2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {708, 4060}}";
-			sepNavSelRange = "{5294, 0}";
-			sepNavVisRange = "{1189, 1358}";
+			sepNavIntBoundsRect = "{{0, 0}, {708, 4144}}";
+			sepNavSelRange = "{4900, 0}";
+			sepNavVisRange = "{968, 1452}";
 			sepNavVisRect = "{{0, 0}, {764, 429}}";
 			sepNavWindowFrame = "{{444, 97}, {767, 781}}";
 		};
@@ -1012,7 +1034,7 @@
 		comments = "warning: passing argument 2 of ‘putStringToReply’ makes integer from pointer without a cast";
 		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
 		rLen = 1;
-		rLoc = 285;
+		rLoc = 286;
 		rType = 1;
 	};
 	8D57630D048677EA00EA77CD /* HelpBook */ = {

@@ -22,17 +22,6 @@ void showFSRefPath(const FSRef *ref_p)
 }
 
 #pragma mark main routines
-OSErr versionHandler(const AppleEvent *ev, AppleEvent *reply, long refcon)
-{
-	OSErr err;
-	CFBundleRef	bundle = CFBundleGetBundleWithIdentifier(BUNDLE_ID);
-	CFDictionaryRef info = CFBundleGetInfoDictionary(bundle);
-	
-	CFStringRef vers = CFDictionaryGetValue(info, CFSTR("CFBundleShortVersionString"));
-	err = putStringToEvent(reply, keyAEResult, vers, kCFStringEncodingUnicode);
-	return err;
-}
-
 OSStatus CopyMainBundleRef(FSRef *ref_p, CFURLRef *bundleURL_p, CFBundleRef *bundleRef_p)
 {
 	OSStatus err = noErr;
@@ -210,8 +199,6 @@ bail:
 }
 
 
-#pragma mark functions to install AppleEvent Managers
-
 void setupErrorString(const AppleEvent *ev, AppleEvent *reply, OSErr err)
 {
 	CFURLRef file_url = NULL;
@@ -232,18 +219,32 @@ void setupErrorString(const AppleEvent *ev, AppleEvent *reply, OSErr err)
 			break;
 	}
 	
-	 file_url = CFURLCreateWithEvent(ev, keyDirectObject, &err);
-	 if (file_url) {
-		 path = CFURLCopyFileSystemPath(file_url, kCFURLHFSPathStyle);
-	 }
-	 if ((err == noErr) && path) {
-		 msg = CFStringCreateWithFormat(NULL, NULL, template, path);
-		 putStringToEvent(reply, keyErrorString, msg, kCFStringEncodingUTF8);
-		 CFRelease(msg);
-	 }
-	 safeRelease(path);
-	 safeRelease(file_url);
-	 
+	file_url = CFURLCreateWithEvent(ev, keyDirectObject, &err);
+	if (file_url) {
+		path = CFURLCopyFileSystemPath(file_url, kCFURLHFSPathStyle);
+	}
+	if ((err == noErr) && path) {
+		msg = CFStringCreateWithFormat(NULL, NULL, template, path);
+		putStringToEvent(reply, keyErrorString, msg, kCFStringEncodingUTF8);
+		CFRelease(msg);
+	}
+	safeRelease(path);
+	safeRelease(file_url);
+}
+
+#pragma mark functions to install AppleEvent Managers
+
+OSErr versionHandler(const AppleEvent *ev, AppleEvent *reply, long refcon)
+{
+	++gAdditionReferenceCount;
+	OSErr err;
+	CFBundleRef	bundle = CFBundleGetBundleWithIdentifier(BUNDLE_ID);
+	CFDictionaryRef info = CFBundleGetInfoDictionary(bundle);
+	
+	CFStringRef vers = CFDictionaryGetValue(info, CFSTR("CFBundleShortVersionString"));
+	err = putStringToEvent(reply, keyAEResult, vers, kCFStringEncodingUnicode);
+	return err;
+	--gAdditionReferenceCount;
 }
 
 OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon)
