@@ -214,7 +214,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>2C5B39C010B78654004396E4</string>
+						<string>2C5B3A0210B78969004396E4</string>
 						<key>history</key>
 						<array>
 							<string>2C40267C10B4CFBE00BBF1B5</string>
@@ -316,15 +316,16 @@
 								<string>089C167CFE841241C02AAC07</string>
 								<string>19C28FB6FE9D52B211CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
+								<string>2C5B39F510B786EF004396E4</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
-									<integer>5</integer>
-									<integer>0</integer>
+									<integer>24</integer>
+									<integer>23</integer>
+									<integer>21</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -377,7 +378,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C5B39B610B78654004396E4</string>
+										<string>2C5B3A0010B78969004396E4</string>
 										<key>history</key>
 										<array>
 											<string>2C47DF7810B13DE1002ADC14</string>
@@ -425,7 +426,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C5B39BD10B78654004396E4</string>
+										<string>2C5B3A0110B78969004396E4</string>
 										<key>history</key>
 										<array>
 											<string>2C47DF7810B13DE1002ADC14</string>
@@ -637,6 +638,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>2C18E6771087FEFC00C065E2</string>
 		<string>2C47DF7E10B13DE1002ADC14</string>
 		<string>/Users/tkurita/Dev/Projects/HelpBookOSAX/trunk/HelpBook.xcodeproj</string>
 	</array>
@@ -657,14 +659,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>HelpBookHandlers.c</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -722,7 +722,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>2C18E6771087FEFC00C065E2</string>
-				<string>2C40259910B4194B00BBF1B5</string>
+				<string>2C5B39F910B786EF004396E4</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -733,7 +733,7 @@
 			<key>WindowToolGUID</key>
 			<string>2C18E6771087FEFC00C065E2</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

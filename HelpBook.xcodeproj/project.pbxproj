@@ -158,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C18E6AD1088000200C065E2 /* Build configuration list for PBXNativeTarget "HelpBook for 10.5" */;
 			buildPhases = (
+				2C5B39EE10B786DB004396E4 /* ShellScript */,
 				2C18E6AA1088000200C065E2 /* ShellScript */,
 				2C18E6A11088000200C065E2 /* Resources */,
 				2C18E6A21088000200C065E2 /* Sources */,
@@ -197,6 +198,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB911A08733D790010E9CD /* Build configuration list for PBXNativeTarget "HelpBook" */;
 			buildPhases = (
+				2C5B3A0410B789A9004396E4 /* ShellScript */,
 				2C58596D0BAFA27100D46AD8 /* ShellScript */,
 				8D57630F048677EA00EA77CD /* Resources */,
 				8D576311048677EA00EA77CD /* Sources */,
@@ -330,6 +332,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/bin/sdp -f a -o ${SRCROOT}/HelpBook.r HelpBook.sdef";
+		};
+		2C5B39EE10B786DB004396E4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "osascript <<EOS\ntry\ntell application \"Finder\"\n  set an_item to POSIX file \"${INSTALL_DIR}/${FULL_PRODUCT_NAME}\"\n  delete (an_item as alias)\nend tell\nend try\nreturn\nEOS\n";
+		};
+		2C5B3A0410B789A9004396E4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "osascript <<EOS\ntry\ntell application \"Finder\"\n  set an_item to POSIX file \"${INSTALL_DIR}/${FULL_PRODUCT_NAME}\"\n  delete (an_item as alias)\nend tell\nend try\nreturn\nEOS\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
