@@ -199,15 +199,14 @@ bail:
 }
 
 
-void setupErrorString(const AppleEvent *ev, AppleEvent *reply, OSErr err)
+OSErr setupErrorString(const AppleEvent *ev, AppleEvent *reply, OSErr err)
 {
 	CFURLRef file_url = NULL;
 	CFStringRef path = NULL;
 	CFStringRef msg = NULL;
 	CFStringRef template = NULL;
 	
-	if (err == noErr) return;
-	
+	if (err == noErr) return err;
 	switch (err) {
 		case -50:
 			template = CFSTR("Failed to register HelpBook for \n\"%@\".");
@@ -216,21 +215,24 @@ void setupErrorString(const AppleEvent *ev, AppleEvent *reply, OSErr err)
 		case 1851:
 			template = CFSTR("Succeeded in recovering Info.plist but failed to register HelpBook for \n\"%@\" .\n\n You may need to relaunch the application.");
 		default:
-			return;
+			goto bail;
 			break;
 	}
 	
-	file_url = CFURLCreateWithEvent(ev, keyDirectObject, &err);
+	OSErr err_url = noErr;
+	file_url = CFURLCreateWithEvent(ev, keyDirectObject, &err_url);
 	if (file_url) {
 		path = CFURLCopyFileSystemPath(file_url, kCFURLHFSPathStyle);
 	}
-	if ((err == noErr) && path) {
+	if ((err_url == noErr) && path) {
 		msg = CFStringCreateWithFormat(NULL, NULL, template, path);
 		putStringToEvent(reply, keyErrorString, msg, kCFStringEncodingUTF8);
 		CFRelease(msg);
 	}
 	safeRelease(path);
 	safeRelease(file_url);
+bail:
+	return err;
 }
 
 #pragma mark functions to install AppleEvent Managers
@@ -258,7 +260,7 @@ OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon r
 	CFStringRef bookName = NULL;
 	err = registerHelpBook(ev, &bookName);
 
-	setupErrorString(ev, reply, err);
+	err = setupErrorString(ev, reply, err);
 	
 	if ((err == noErr) && (bookName != NULL)) {
 		err = putStringToEvent(reply, keyAEResult, bookName, typeUnicodeText);
@@ -280,7 +282,7 @@ OSErr showHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refco
 	CFStringRef bookName = NULL;
 	err = registerHelpBook(ev, &bookName);
 	
-	setupErrorString(ev, reply, err);
+	err = setupErrorString(ev, reply, err);
 	
 	if ((err == noErr) && (bookName != NULL)) {
 		err = AHGotoPage(bookName, NULL, NULL);
