@@ -302,6 +302,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/bin/sdp -f a -o ${SRCROOT}/HelpBook.r HelpBook.sdef";
+			showEnvVarsInLog = 0;
 		};
 		2C47DF9010B13F4A002ADC14 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -344,7 +345,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "osascript <<EOS\ntry\ntell application \"Finder\"\n  set an_item to POSIX file \"${INSTALL_DIR}/${FULL_PRODUCT_NAME}\"\n  delete (an_item as alias)\nend tell\nend try\nreturn\nEOS\n";
+			shellScript = "exit 0;\nmv \"${INSTALL_DIR}/${FULL_PRODUCT_NAME}\" ~/.Trash\nexit 0;\nosascript <<EOS\ntry\ntell application \"Finder\"\n  set an_item to POSIX file \"${INSTALL_DIR}/${FULL_PRODUCT_NAME}\"\n  delete (an_item as alias)\nend tell\nend try\nreturn\nEOS\n";
+			showEnvVarsInLog = 0;
 		};
 		2C5B3A0410B789A9004396E4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -398,7 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -414,7 +416,7 @@
 		1DEB911C08733D790010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
@@ -455,7 +457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -472,7 +474,7 @@
 		2C18E6AF1088000200C065E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info_10_5.plist;
