@@ -46,6 +46,7 @@
 		2C72FFB109583F760091C86F /* HelpBook.r */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; path = HelpBook.r; sourceTree = "<group>"; };
 		2C76E22809EA1DB6000CC37E /* HelpBookHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpBookHandlers.h; sourceTree = "<group>"; };
 		2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HelpBookHandlers.c; sourceTree = "<group>"; };
+		2C8E290A10BFBB27008C44A9 /* History.rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = History.rd; path = ../History.rd; sourceTree = "<group>"; wrapsLines = 1; };
 		2CCF2A540BAA7EE900A6496C /* AEUtils.c */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.c.c; path = AEUtils.c; sourceTree = "<group>"; };
 		2CCF2A550BAA7EE900A6496C /* AEUtils.h */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.c.h; path = AEUtils.h; sourceTree = "<group>"; };
 		8D576316048677EA00EA77CD /* HelpBook.osax */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelpBook.osax; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +90,7 @@
 		089C166AFE841209C02AAC07 /* UnEscapeURL */ = {
 			isa = PBXGroup;
 			children = (
+				2C8E290A10BFBB27008C44A9 /* History.rd */,
 				2C2B97CE10ACE2CB007C570A /* testscript.scpt */,
 				2CCF2A530BAA7EE900A6496C /* AEUtils */,
 				08FB77AFFE84173DC02AAC07 /* Source */,
@@ -400,7 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -416,7 +418,7 @@
 		1DEB911C08733D790010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
@@ -457,7 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -474,7 +476,7 @@
 		2C18E6AF1088000200C065E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info_10_5.plist;
