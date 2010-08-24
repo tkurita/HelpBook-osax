@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1351151222BF15004C82BA /* Info_10_6.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D576317048677EA00EA77CD /* Info_10_6.plist */; };
+		2C1351161222BF17004C82BA /* Info_10_6.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D576317048677EA00EA77CD /* Info_10_6.plist */; };
+		2C1351171222BF1B004C82BA /* Info_10_5.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C18E6B11088000200C065E2 /* Info_10_5.plist */; };
+		2C1351181222BF1C004C82BA /* Info_10_5.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C18E6B11088000200C065E2 /* Info_10_5.plist */; };
 		2C18E6A31088000200C065E2 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C72FD30095819440091C86F /* main.c */; };
 		2C18E6A41088000200C065E2 /* HelpBookHandlers.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */; };
 		2C18E6A51088000200C065E2 /* AEUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF2A540BAA7EE900A6496C /* AEUtils.c */; };
@@ -50,7 +54,7 @@
 		2CCF2A540BAA7EE900A6496C /* AEUtils.c */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.c.c; path = AEUtils.c; sourceTree = "<group>"; };
 		2CCF2A550BAA7EE900A6496C /* AEUtils.h */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.c.h; path = AEUtils.h; sourceTree = "<group>"; };
 		8D576316048677EA00EA77CD /* HelpBook.osax */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelpBook.osax; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D576317048677EA00EA77CD /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist; fileEncoding = 4; path = Info.plist; sourceTree = "<group>"; };
+		8D576317048677EA00EA77CD /* Info_10_6.plist */ = {isa = PBXFileReference; explicitFileType = text.plist; fileEncoding = 4; path = Info_10_6.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +120,7 @@
 			children = (
 				2C72FFAF09583F670091C86F /* HelpBook.sdef */,
 				2C72FDC1095836400091C86F /* HelpBook App-Info.plist */,
-				8D576317048677EA00EA77CD /* Info.plist */,
+				8D576317048677EA00EA77CD /* Info_10_6.plist */,
 				2C18E6B11088000200C065E2 /* Info_10_5.plist */,
 				2C72FFB109583F760091C86F /* HelpBook.r */,
 			);
@@ -242,6 +246,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C2B97D510ACE38A007C570A /* HelpBook.sdef in Resources */,
+				2C1351161222BF17004C82BA /* Info_10_6.plist in Resources */,
+				2C1351181222BF1C004C82BA /* Info_10_5.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C2B97E010ACE504007C570A /* HelpBook.sdef in Resources */,
+				2C1351151222BF15004C82BA /* Info_10_6.plist in Resources */,
+				2C1351171222BF1B004C82BA /* Info_10_5.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +415,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Info_10_6.plist;
 				INSTALL_PATH = "$(HOME)/Library/ScriptingAdditions";
 				PRODUCT_NAME = HelpBook;
 				WRAPPER_EXTENSION = osax;
@@ -421,7 +429,7 @@
 				CURRENT_PROJECT_VERSION = 6;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Info_10_6.plist;
 				INSTALL_PATH = /Library/ScriptingAdditions;
 				PRODUCT_NAME = HelpBook;
 				WRAPPER_EXTENSION = osax;
