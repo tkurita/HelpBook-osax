@@ -1,7 +1,7 @@
 // !$*UTF8*$!
 {
 	089C1669FE841209C02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Release;
+		activeBuildConfigurationName = Debug;
 		activeExecutable = 2C72FDC0095836400091C86F /* HelpBook App */;
 		activeTarget = 2C18E6A01088000200C065E2 /* HelpBook for 10.5 */;
 		addToTargets = (
@@ -158,6 +158,32 @@
 			2C13510F1222BBE7004C82BA /* PlistBookmark */ = 2C13510F1222BBE7004C82BA /* PlistBookmark */;
 			2C1351101222BBE7004C82BA /* PBXTextBookmark */ = 2C1351101222BBE7004C82BA /* PBXTextBookmark */;
 			2C1351111222BBE7004C82BA /* PBXTextBookmark */ = 2C1351111222BBE7004C82BA /* PBXTextBookmark */;
+			2C13514912235474004C82BA /* PBXTextBookmark */ = 2C13514912235474004C82BA /* PBXTextBookmark */;
+			2C13514A12235474004C82BA /* PBXTextBookmark */ = 2C13514A12235474004C82BA /* PBXTextBookmark */;
+			2C1351621223949C004C82BA /* PBXTextBookmark */ = 2C1351621223949C004C82BA /* PBXTextBookmark */;
+			2C1351631223949C004C82BA /* PBXTextBookmark */ = 2C1351631223949C004C82BA /* PBXTextBookmark */;
+			2C1351641223949C004C82BA /* PBXTextBookmark */ = 2C1351641223949C004C82BA /* PBXTextBookmark */;
+			2C1351651223949C004C82BA /* PBXTextBookmark */ = 2C1351651223949C004C82BA /* PBXTextBookmark */;
+			2C13516E1223A03D004C82BA /* PlistBookmark */ = 2C13516E1223A03D004C82BA /* PlistBookmark */;
+			2C13516F1223A03D004C82BA /* PlistBookmark */ = 2C13516F1223A03D004C82BA /* PlistBookmark */;
+			2C1351701223A03D004C82BA /* PBXTextBookmark */ = 2C1351701223A03D004C82BA /* PBXTextBookmark */;
+			2C1351711223A03D004C82BA /* PBXTextBookmark */ = 2C1351711223A03D004C82BA /* PBXTextBookmark */;
+			2C1351721223A03D004C82BA /* PBXTextBookmark */ = 2C1351721223A03D004C82BA /* PBXTextBookmark */;
+			2C1351731223A03D004C82BA /* PBXTextBookmark */ = 2C1351731223A03D004C82BA /* PBXTextBookmark */;
+			2C1351741223A03D004C82BA /* PBXTextBookmark */ = 2C1351741223A03D004C82BA /* PBXTextBookmark */;
+			2C1351751223A03D004C82BA /* PlistBookmark */ = 2C1351751223A03D004C82BA /* PlistBookmark */;
+			2C1351761223A03D004C82BA /* PlistBookmark */ = 2C1351761223A03D004C82BA /* PlistBookmark */;
+			2C1351771223A03D004C82BA /* PlistBookmark */ = 2C1351771223A03D004C82BA /* PlistBookmark */;
+			2C1351781223A03D004C82BA /* PBXTextBookmark */ = 2C1351781223A03D004C82BA /* PBXTextBookmark */;
+			2C1351791223A03D004C82BA /* PlistBookmark */ = 2C1351791223A03D004C82BA /* PlistBookmark */;
+			2C13517A1223A03D004C82BA /* PBXTextBookmark */ = 2C13517A1223A03D004C82BA /* PBXTextBookmark */;
+			2C13517B1223A03D004C82BA /* PBXTextBookmark */ = 2C13517B1223A03D004C82BA /* PBXTextBookmark */;
+			2C1351861223A107004C82BA /* PBXTextBookmark */ = 2C1351861223A107004C82BA /* PBXTextBookmark */;
+			2C1351881223A107004C82BA /* PBXTextBookmark */ = 2C1351881223A107004C82BA /* PBXTextBookmark */;
+			2C1351891223A107004C82BA /* PlistBookmark */ = 2C1351891223A107004C82BA /* PlistBookmark */;
+			2C13518A1223A107004C82BA /* PBXTextBookmark */ = 2C13518A1223A107004C82BA /* PBXTextBookmark */;
+			2C13518B1223A107004C82BA /* PlistBookmark */ = 2C13518B1223A107004C82BA /* PlistBookmark */;
+			2C13518C1223A107004C82BA /* PBXTextBookmark */ = 2C13518C1223A107004C82BA /* PBXTextBookmark */;
 			2C2CD6CB10BCB90C008CA461 = 2C2CD6CB10BCB90C008CA461 /* PlistBookmark */;
 			2C47DF7810B13DE1002ADC14 = 2C47DF7810B13DE1002ADC14 /* PBXTextBookmark */;
 			2C5B3B8710B98668004396E4 = 2C5B3B8710B98668004396E4 /* PBXTextBookmark */;
@@ -257,6 +283,279 @@
 		rLoc = 278;
 		rType = 0;
 		vrLen = 1684;
+		vrLoc = 0;
+	};
+	2C13514912235474004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: initialization from incompatible pointer type";
+		fRef = 2C72FD30095819440091C86F /* main.c */;
+		rLen = 1;
+		rLoc = 41;
+		rType = 1;
+	};
+	2C13514A12235474004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C72FD30095819440091C86F /* main.c */;
+		name = "main.c: 42";
+		rLen = 52;
+		rLoc = 941;
+		rType = 0;
+		vrLen = 370;
+		vrLoc = 0;
+	};
+	2C13514B12239401004C82BA /* HelpBook for 10.4 */ = {
+		activeExec = 0;
+	};
+	2C1351621223949C004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C72FD30095819440091C86F /* main.c */;
+		name = "main.c: 42";
+		rLen = 52;
+		rLoc = 941;
+		rType = 0;
+		vrLen = 277;
+		vrLoc = 0;
+	};
+	2C1351631223949C004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: syntax error before ‘SRefCon’";
+		fRef = 2C76E22809EA1DB6000CC37E /* HelpBookHandlers.h */;
+		rLen = 1;
+		rLoc = 7;
+		rType = 1;
+	};
+	2C1351641223949C004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C72FD30095819440091C86F /* main.c */;
+		name = "main.c: 42";
+		rLen = 52;
+		rLoc = 941;
+		rType = 0;
+		vrLen = 277;
+		vrLoc = 0;
+	};
+	2C1351651223949C004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C76E22809EA1DB6000CC37E /* HelpBookHandlers.h */;
+		name = "HelpBookHandlers.h: 4";
+		rLen = 88;
+		rLoc = 196;
+		rType = 0;
+		vrLen = 328;
+		vrLoc = 0;
+	};
+	2C13516E1223A03D004C82BA /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2C18E6B11088000200C065E2 /* Info_10_5.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/tkurita/Dev/Projects/HelpBookOSAX/trunk/Info_10_5.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2C13516F1223A03D004C82BA /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D576317048677EA00EA77CD /* Info_10_6.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/tkurita/Dev/Projects/HelpBookOSAX/trunk/Info_10_6.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2C1351701223A03D004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C72FD30095819440091C86F /* main.c */;
+		name = "main.c: 42";
+		rLen = 52;
+		rLoc = 941;
+		rType = 0;
+		vrLen = 993;
+		vrLoc = 0;
+	};
+	2C1351711223A03D004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CCF2A550BAA7EE900A6496C /* AEUtils.h */;
+		name = "AEUtils.h: 36";
+		rLen = 58;
+		rLoc = 1785;
+		rType = 0;
+		vrLen = 1940;
+		vrLoc = 0;
+	};
+	2C1351721223A03D004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C76E22809EA1DB6000CC37E /* HelpBookHandlers.h */;
+		name = "HelpBookHandlers.h: 10";
+		rLen = 0;
+		rLoc = 437;
+		rType = 0;
+		vrLen = 446;
+		vrLoc = 0;
+	};
+	2C1351731223A03D004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
+		name = "HelpBookHandlers.c: 253";
+		rLen = 7;
+		rLoc = 6782;
+		rType = 0;
+		vrLen = 1011;
+		vrLoc = 6137;
+	};
+	2C1351741223A03D004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CCF2A550BAA7EE900A6496C /* AEUtils.h */;
+		name = "AEUtils.h: 38";
+		rLen = 0;
+		rLoc = 1940;
+		rType = 0;
+		vrLen = 1940;
+		vrLoc = 0;
+	};
+	2C1351751223A03D004C82BA /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2C18E6B11088000200C065E2 /* Info_10_5.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/tkurita/Dev/Projects/HelpBookOSAX/trunk/Info_10_5.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2C1351761223A03D004C82BA /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2C18E6B11088000200C065E2 /* Info_10_5.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/tkurita/Dev/Projects/HelpBookOSAX/trunk/Info_10_5.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2C1351771223A03D004C82BA /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2C18E6B11088000200C065E2 /* Info_10_5.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/tkurita/Dev/Projects/HelpBookOSAX/trunk/Info_10_5.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2C1351781223A03D004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C72FD30095819440091C86F /* main.c */;
+		name = "main.c: 42";
+		rLen = 52;
+		rLoc = 941;
+		rType = 0;
+		vrLen = 996;
+		vrLoc = 0;
+	};
+	2C1351791223A03D004C82BA /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D576317048677EA00EA77CD /* Info_10_6.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/tkurita/Dev/Projects/HelpBookOSAX/trunk/Info_10_6.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2C13517A1223A03D004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C72FD30095819440091C86F /* main.c */;
+		name = "main.c: 42";
+		rLen = 52;
+		rLoc = 941;
+		rType = 0;
+		vrLen = 993;
+		vrLoc = 0;
+	};
+	2C13517B1223A03D004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
+		name = "HelpBookHandlers.c: 240";
+		rLen = 0;
+		rLoc = 6327;
+		rType = 0;
+		vrLen = 1149;
+		vrLoc = 6045;
+	};
+	2C1351861223A107004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C1351871223A107004C82BA /* AEDataModel.h */;
+		name = "AEDataModel.h: 1354";
+		rLen = 127;
+		rLoc = 48421;
+		rType = 0;
+		vrLen = 1708;
+		vrLoc = 47595;
+	};
+	2C1351871223A107004C82BA /* AEDataModel.h */ = {
+		isa = PBXFileReference;
+		name = AEDataModel.h;
+		path = /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/Headers/AEDataModel.h;
+		sourceTree = "<absolute>";
+	};
+	2C1351881223A107004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C72FD30095819440091C86F /* main.c */;
+		name = "main.c: 42";
+		rLen = 52;
+		rLoc = 941;
+		rType = 0;
+		vrLen = 1173;
+		vrLoc = 996;
+	};
+	2C1351891223A107004C82BA /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D576317048677EA00EA77CD /* Info_10_6.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/tkurita/Dev/Projects/HelpBookOSAX/trunk/Info_10_6.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2C13518A1223A107004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
+		name = "HelpBookHandlers.c: 240";
+		rLen = 0;
+		rLoc = 6327;
+		rType = 0;
+		vrLen = 1070;
+		vrLoc = 0;
+	};
+	2C13518B1223A107004C82BA /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D576317048677EA00EA77CD /* Info_10_6.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/tkurita/Dev/Projects/HelpBookOSAX/trunk/Info_10_6.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2C13518C1223A107004C82BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */;
+		name = "HelpBookHandlers.c: 17";
+		rLen = 0;
+		rLoc = 424;
+		rType = 0;
+		vrLen = 1070;
 		vrLoc = 0;
 	};
 	2C18E6A01088000200C065E2 /* HelpBook for 10.5 */ = {
@@ -488,9 +787,9 @@
 	};
 	2C72FD30095819440091C86F /* main.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {744, 1344}}";
-			sepNavSelRange = "{74, 6}";
-			sepNavVisRange = "{0, 1075}";
+			sepNavIntBoundsRect = "{{0, 0}, {705, 1344}}";
+			sepNavSelRange = "{941, 52}";
+			sepNavVisRange = "{996, 1173}";
 			sepNavVisRect = "{{0, 46}, {764, 429}}";
 			sepNavWindowFrame = "{{38, 140}, {958, 772}}";
 		};
@@ -564,17 +863,17 @@
 	};
 	2C76E22809EA1DB6000CC37E /* HelpBookHandlers.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {744, 604}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 328}";
+			sepNavIntBoundsRect = "{{0, 0}, {851, 203}}";
+			sepNavSelRange = "{267, 7}";
+			sepNavVisRange = "{0, 446}";
 			sepNavVisRect = "{{0, 0}, {764, 429}}";
 		};
 	};
 	2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {966, 4172}}";
-			sepNavSelRange = "{5680, 0}";
-			sepNavVisRange = "{5131, 1072}";
+			sepNavIntBoundsRect = "{{0, 0}, {966, 4312}}";
+			sepNavSelRange = "{424, 0}";
+			sepNavVisRange = "{0, 1070}";
 			sepNavVisRect = "{{0, 0}, {764, 429}}";
 			sepNavWindowFrame = "{{444, 97}, {767, 781}}";
 		};
@@ -811,7 +1110,7 @@
 	};
 	2CCF2A540BAA7EE900A6496C /* AEUtils.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {705, 8512}}";
+			sepNavIntBoundsRect = "{{0, 0}, {705, 8484}}";
 			sepNavSelRange = "{15236, 0}";
 			sepNavVisRange = "{1844, 1269}";
 			sepNavVisRect = "{{0, 525}, {764, 215}}";
@@ -820,7 +1119,7 @@
 	2CCF2A550BAA7EE900A6496C /* AEUtils.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {705, 625}}";
-			sepNavSelRange = "{1940, 0}";
+			sepNavSelRange = "{1785, 58}";
 			sepNavVisRange = "{0, 1940}";
 			sepNavVisRect = "{{0, 0}, {764, 429}}";
 			sepNavWindowFrame = "{{38, 97}, {767, 781}}";

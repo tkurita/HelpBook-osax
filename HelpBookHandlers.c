@@ -237,7 +237,7 @@ bail:
 
 #pragma mark functions to install AppleEvent Managers
 
-OSErr versionHandler(const AppleEvent *ev, AppleEvent *reply, long refcon)
+OSErr versionHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon)
 {
 	++gAdditionReferenceCount;
 	OSErr err;
