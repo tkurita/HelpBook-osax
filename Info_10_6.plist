@@ -5,9 +5,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>Japanese</string>
 	<key>CFBundleExecutable</key>
-	<string>${EXECUTABLE_NAME}</string>
+	<string>HelpBook</string>
 	<key>CFBundleVersion</key>
-	<string>7</string>
+	<string>8</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.1.2</string>
 	<key>NSHumanReadableCopyright</key>
@@ -21,13 +21,13 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>HelpBook</string>
 	<key>CFBundlePackageType</key>
 	<string>osax</string>
 	<key>CFBundleSignature</key>
 	<string>ascr</string>
 	<key>OSAScriptingDefinition</key>
-	<string>${PRODUCT_NAME}.sdef</string>
+	<string>HelpBook.sdef</string>
 	<key>CSResourcesFileMapped</key>
 	<true/>
 	<key>OSAXHandlers</key>
