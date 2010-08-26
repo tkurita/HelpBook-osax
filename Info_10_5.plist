@@ -14,10 +14,8 @@
 	<string>for 10.5. copyright 2006-2010, Tetsuro KURITA</string>
 	<key>CFBundleGetInfoString</key>
 	<string>1.1.2 for 10.5. copyright 2006-2010, Tetsuro KURITA</string>
-	<key>CFBundleIconFile</key>
-	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>Scriptfactory.HelpBookOSAX</string>
+	<string>Scriptfactory.osax.HelpBook</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

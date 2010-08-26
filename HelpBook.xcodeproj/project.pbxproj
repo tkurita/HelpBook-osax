@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C1351161222BF17004C82BA /* Info_10_6.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D576317048677EA00EA77CD /* Info_10_6.plist */; };
 		2C1351171222BF1B004C82BA /* Info_10_5.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C18E6B11088000200C065E2 /* Info_10_5.plist */; };
 		2C13514F12239401004C82BA /* HelpBook.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 2C72FFAF09583F670091C86F /* HelpBook.sdef */; };
 		2C13515012239401004C82BA /* Info_10_6.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D576317048677EA00EA77CD /* Info_10_6.plist */; };
@@ -212,6 +211,7 @@
 				2C18E6A21088000200C065E2 /* Sources */,
 				2C18E6A61088000200C065E2 /* Frameworks */,
 				2C18E6AB1088000200C065E2 /* Rez */,
+				2C749D5C1226368800DD49B3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -298,7 +298,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C2B97D510ACE38A007C570A /* HelpBook.sdef in Resources */,
-				2C1351161222BF17004C82BA /* Info_10_6.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +457,21 @@
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "osascript <<EOS\ntry\ntell application \"Finder\"\n  set an_item to POSIX file \"${INSTALL_DIR}/${FULL_PRODUCT_NAME}\"\n  delete (an_item as alias)\nend tell\nend try\nreturn\nEOS\n";
+		};
+		2C749D5C1226368800DD49B3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Info_10_6.plist",
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Info_10_6.plist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "plist=`cat \"${SCRIPT_INPUT_FILE_0}\"`\neval echo \\\"$plist\\\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
