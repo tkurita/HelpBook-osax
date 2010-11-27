@@ -230,8 +230,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -281,13 +279,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>22</integer>
-									<integer>19</integer>
-									<integer>0</integer>
+									<integer>26</integer>
+									<integer>24</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {254, 574}}</string>
+							<string>{{0, 61}, {254, 574}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -308,7 +305,7 @@
 							<real>232</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>187 223 1019 633 0 0 1440 878 </string>
+						<string>143 210 1019 633 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -324,7 +321,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Info_10_4.plist</string>
+								<string>Info_10_5.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -332,19 +329,24 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Info_10_4.plist</string>
+										<string>Info_10_5.plist</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>2C82A01512A0C30F006D45B7</string>
 										<key>history</key>
 										<array>
 											<string>2C47DF7810B13DE1002ADC14</string>
 											<string>2C5B3B8710B98668004396E4</string>
 											<string>2C1351711223A03D004C82BA</string>
 											<string>2C1351861223A107004C82BA</string>
-											<string>2C1351881223A107004C82BA</string>
 											<string>2C1351B51223A430004C82BA</string>
 											<string>2CFF36EE1223CA6B001C2505</string>
 											<string>2C86BCD71224989D00FEEA64</string>
 											<string>2C749D7D1226446700DD49B3</string>
 											<string>2C749D7F1226446700DD49B3</string>
+											<string>2C82A01212A0C30F006D45B7</string>
+											<string>2C82A01312A0C30F006D45B7</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -359,6 +361,7 @@
 											<string>2C86BCD91224989D00FEEA64</string>
 											<string>2C749D861226446700DD49B3</string>
 											<string>2C749D881226446700DD49B3</string>
+											<string>2C82A01412A0C30F006D45B7</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -372,7 +375,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {743, 535}}</string>
 								<key>RubberWindowFrame</key>
-								<string>187 223 1019 633 0 0 1440 878 </string>
+								<string>143 210 1019 633 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -392,7 +395,7 @@
 								<key>Frame</key>
 								<string>{{0, 540}, {743, 52}}</string>
 								<key>RubberWindowFrame</key>
-								<string>187 223 1019 633 0 0 1440 878 </string>
+								<string>143 210 1019 633 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -416,9 +419,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2C19E7A51284593E00C14DF1</string>
+				<string>2C82A00E12A0BDFF006D45B7</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>2C19E7A61284593E00C14DF1</string>
+				<string>2C82A00F12A0BDFF006D45B7</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -550,10 +553,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>2C18E6771087FEFC00C065E2</string>
 		<string>/Users/tkurita/Dev/Projects/HelpBookOSAX/trunk/HelpBook.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>187 223 1019 633 0 0 1440 878 </string>
+	<string>143 210 1019 633 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -632,7 +636,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>2C18E6771087FEFC00C065E2</string>
-				<string>2C19E7851284593500C14DF1</string>
+				<string>2C82A01612A0C30F006D45B7</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
