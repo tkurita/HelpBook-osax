@@ -237,15 +237,14 @@ bail:
 
 #pragma mark functions to install AppleEvent Managers
 
+#define STR(s) _STR(s)
+#define _STR(s) #s 
+
 OSErr versionHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon)
 {
 	++gAdditionReferenceCount;
 	OSErr err;
-	CFBundleRef	bundle = CFBundleGetBundleWithIdentifier(BUNDLE_ID);
-	CFDictionaryRef info = CFBundleGetInfoDictionary(bundle);
-	
-	CFStringRef vers = CFDictionaryGetValue(info, CFSTR("CFBundleShortVersionString"));
-	err = putStringToEvent(reply, keyAEResult, vers, kCFStringEncodingUnicode);
+	err = putStringToEvent(reply, keyAEResult, CFSTR(STR(HelpBook_OSAX_VERSION)), kCFStringEncodingUnicode);
 	return err;
 	--gAdditionReferenceCount;
 }
