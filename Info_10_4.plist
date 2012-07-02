@@ -33,7 +33,7 @@
 		<key>Events</key>
 		<dict>
 			<key>HBsuVers</key>
-			<string>versionHandler</string>
+			<string>HelpBookOSAXVersionHandler</string>
 			<key>HBsurgHB</key>
 			<string>registerHelpBookHandler</string>
 			<key>HBsushHB</key>

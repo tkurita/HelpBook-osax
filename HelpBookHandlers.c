@@ -240,7 +240,7 @@ bail:
 #define STR(s) _STR(s)
 #define _STR(s) #s 
 
-OSErr versionHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon)
+OSErr HelpBookOSAXVersionHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon)
 {
 	++gAdditionReferenceCount;
 	OSErr err;

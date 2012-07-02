@@ -573,7 +573,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HelpBook_OSAX_VERSION = 3.0.9;
+				HelpBook_OSAX_VERSION = 1.1.4;
 				INSTALL_PATH = /Library/ScriptingAdditions;
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;

@@ -53,7 +53,7 @@
 			<key>HBsuVers</key>
 			<dict>
 				<key>Handler</key>
-				<string>versionHandler</string>
+				<string>HelpBookOSAXVersionHandler</string>
 				<key>ThreadSafe</key>
 				<true/>
 				<key>Context</key>
