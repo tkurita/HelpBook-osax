@@ -11,9 +11,9 @@
 	<key>CFBundleShortVersionString</key>
 	<string>${HelpBook_OSAX_VERSION}</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>for 10.6. copyright 2006-2010, Tetsuro KURITA</string>
+	<string>for 10.6. copyright 2006-2012, Tetsuro KURITA</string>
 	<key>CFBundleGetInfoString</key>
-	<string>${HelpBook_OSAX_VERSION} for 10.6. copyright 2006-2010, Tetsuro KURITA</string>
+	<string>${HelpBook_OSAX_VERSION} for 10.6. copyright 2006-2012, Tetsuro KURITA</string>
 	<key>CFBundleIdentifier</key>
 	<string>Scriptfactory.osax.HelpBook</string>
 	<key>CFBundleInfoDictionaryVersion</key>
