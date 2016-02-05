@@ -39,7 +39,7 @@ typedef struct AEEventHandlerInfo AEEventHandlerInfo;
 static const AEEventHandlerInfo gEventInfo[] = {
 	{ kHelpBookSuite, kRegisterHelpBookEvent, registerHelpBookHandler },
 	{ kHelpBookSuite, kShowHelpBookEvent, showHelpBookHandler },
-	{ kHelpBookSuite, kVersionEvent, versionHandler },
+	{ kHelpBookSuite, kVersionEvent, HelpBookOSAXVersionHandler },
 };
 
 #define kEventHandlerCount  (sizeof(gEventInfo) / sizeof(AEEventHandlerInfo))

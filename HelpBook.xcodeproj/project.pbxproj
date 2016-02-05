@@ -577,10 +577,12 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = supported;
 				"GCC_ENABLE_OBJC_GC[sdk=macosx10.4][arch=*]" = unsupported;
+				"GCC_VERSION[sdk=macosx10.4][arch=*]" = 4.0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HelpBook_OSAX_VERSION = 1.1.5;
+				HelpBook_OSAX_VERSION = 1.1.4;
 				INSTALL_PATH = /Library/ScriptingAdditions;
+				"MACOSX_DEPLOYMENT_TARGET[sdk=macosx10.4][arch=*]" = 10.4;
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
 			};
@@ -593,10 +595,12 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = supported;
 				"GCC_ENABLE_OBJC_GC[sdk=macosx10.4][arch=*]" = unsupported;
+				"GCC_VERSION[sdk=macosx10.4][arch=*]" = 4.0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HelpBook_OSAX_VERSION = 1.1.5;
+				HelpBook_OSAX_VERSION = 1.1.4;
 				INSTALL_PATH = /Library/ScriptingAdditions;
+				"MACOSX_DEPLOYMENT_TARGET[sdk=macosx10.4][arch=*]" = 10.4;
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
 			};
@@ -649,6 +653,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info_10_5.plist;
 				INSTALL_PATH = "$(HOME)/Library/ScriptingAdditions";
+				"MACOSX_DEPLOYMENT_TARGET[sdk=macosx10.4]" = 10.4;
 				PRODUCT_NAME = HelpBook;
 				SYMROOT = build_10_5;
 				WRAPPER_EXTENSION = osax;

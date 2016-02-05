@@ -7,4 +7,4 @@ typedef SInt32                          SRefCon;
 
 OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon);
 OSErr showHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon);
-OSErr versionHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon);
+OSErr HelpBookOSAXVersionHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon);
