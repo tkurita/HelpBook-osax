@@ -227,6 +227,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -274,8 +276,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>21</integer>
-									<integer>20</integer>
+									<integer>15</integer>
+									<integer>11</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -311,14 +314,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>HelpBookHandlers.c</string>
+								<string>Info_10_5.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,11 +327,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>HelpBookHandlers.c</string>
+										<string>Info_10_5.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C4A0E2315A1F22900C036C3</string>
+										<string>2CA08A7715A1F54000A6C24A</string>
 										<key>history</key>
 										<array>
 											<string>2C5B3B8710B98668004396E4</string>
@@ -342,10 +343,10 @@
 											<string>2C86D2E715A1C911009213E6</string>
 											<string>2C86D2E915A1C911009213E6</string>
 											<string>2C86D2ED15A1C911009213E6</string>
-											<string>2C86D2FF15A1CD29009213E6</string>
-											<string>2C86D30015A1CD29009213E6</string>
-											<string>2C86D30115A1CD29009213E6</string>
-											<string>2C86D2FE15A1CD29009213E6</string>
+											<string>2CA08A7315A1F54000A6C24A</string>
+											<string>2CA08A7415A1F54000A6C24A</string>
+											<string>2CA08A7515A1F54000A6C24A</string>
+											<string>2CA08A7615A1F54000A6C24A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -357,14 +358,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {743, 498}}</string>
+								<string>{{0, 0}, {743, 495}}</string>
 								<key>RubberWindowFrame</key>
 								<string>265 191 1019 633 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>498pt</string>
+							<string>495pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -377,14 +378,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 503}, {743, 89}}</string>
+								<string>{{0, 500}, {743, 92}}</string>
 								<key>RubberWindowFrame</key>
 								<string>265 191 1019 633 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>89pt</string>
+							<string>92pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -403,9 +404,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2C4A0E2415A1F22900C036C3</string>
+				<string>2CA08A7815A1F54000A6C24A</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>2C4A0E2515A1F22900C036C3</string>
+				<string>2CA08A7915A1F54000A6C24A</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -620,7 +621,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>2C18E6771087FEFC00C065E2</string>
-				<string>2C4A0E2615A1F22900C036C3</string>
+				<string>2CA08A7A15A1F54000A6C24A</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
