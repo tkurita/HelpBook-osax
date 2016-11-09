@@ -7,15 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C13514F12239401004C82BA /* HelpBook.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 2C72FFAF09583F670091C86F /* HelpBook.sdef */; };
-		2C13515012239401004C82BA /* Info_10_6.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D576317048677EA00EA77CD /* Info_10_6.plist */; };
-		2C13515212239401004C82BA /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C72FD30095819440091C86F /* main.c */; };
-		2C13515312239401004C82BA /* HelpBookHandlers.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */; };
-		2C13515412239401004C82BA /* AEUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF2A540BAA7EE900A6496C /* AEUtils.c */; };
-		2C13515612239401004C82BA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
-		2C13515712239401004C82BA /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C72FD2D095819360091C86F /* Carbon.framework */; };
-		2C13515812239401004C82BA /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C72FEAA095838150091C86F /* ApplicationServices.framework */; };
-		2C13515A12239401004C82BA /* HelpBook.r in Rez */ = {isa = PBXBuildFile; fileRef = 2C72FFB109583F760091C86F /* HelpBook.r */; };
 		2C18E6A31088000200C065E2 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C72FD30095819440091C86F /* main.c */; };
 		2C18E6A41088000200C065E2 /* HelpBookHandlers.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E22909EA1DB6000CC37E /* HelpBookHandlers.c */; };
 		2C18E6A51088000200C065E2 /* AEUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF2A540BAA7EE900A6496C /* AEUtils.c */; };
@@ -42,8 +33,6 @@
 
 /* Begin PBXFileReference section */
 		0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
-		2C13515E12239401004C82BA /* HelpBook.osax */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelpBook.osax; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C13515F12239401004C82BA /* Info_10_4.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_10_4.plist; sourceTree = "<group>"; };
 		2C18E6B01088000200C065E2 /* HelpBook.osax */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelpBook.osax; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C18E6B11088000200C065E2 /* Info_10_5.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_10_5.plist; sourceTree = "<group>"; };
 		2C2B97CE10ACE2CB007C570A /* testscript.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; path = testscript.scpt; sourceTree = "<group>"; };
@@ -65,16 +54,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2C13515512239401004C82BA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C13515612239401004C82BA /* CoreFoundation.framework in Frameworks */,
-				2C13515712239401004C82BA /* Carbon.framework in Frameworks */,
-				2C13515812239401004C82BA /* ApplicationServices.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2C18E6A61088000200C065E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,7 +118,6 @@
 				2C72FDC1095836400091C86F /* HelpBook App-Info.plist */,
 				8D576317048677EA00EA77CD /* Info_10_6.plist */,
 				2C18E6B11088000200C065E2 /* Info_10_5.plist */,
-				2C13515F12239401004C82BA /* Info_10_4.plist */,
 				2C72FFB109583F760091C86F /* HelpBook.r */,
 			);
 			name = Resources;
@@ -162,7 +140,6 @@
 				8D576316048677EA00EA77CD /* HelpBook.osax */,
 				2C72FDBF095836400091C86F /* HelpBook App.app */,
 				2C18E6B01088000200C065E2 /* HelpBook.osax */,
-				2C13515E12239401004C82BA /* HelpBook.osax */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,27 +156,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2C13514B12239401004C82BA /* HelpBook for 10.4 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2C13515B12239401004C82BA /* Build configuration list for PBXNativeTarget "HelpBook for 10.4" */;
-			buildPhases = (
-				2C13514C12239401004C82BA /* ShellScript */,
-				2C13514D12239401004C82BA /* ShellScript */,
-				2C13514E12239401004C82BA /* Resources */,
-				2C13515112239401004C82BA /* Sources */,
-				2C13515512239401004C82BA /* Frameworks */,
-				2C13515912239401004C82BA /* Rez */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "HelpBook for 10.4";
-			productInstallPath = "$(HOME)/Library/Bundles";
-			productName = UnEscapeURL;
-			productReference = 2C13515E12239401004C82BA /* HelpBook.osax */;
-			productType = "com.apple.product-type.bundle";
-		};
 		2C18E6A01088000200C065E2 /* HelpBook for 10.5 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C18E6AD1088000200C065E2 /* Build configuration list for PBXNativeTarget "HelpBook for 10.5" */;
@@ -286,22 +242,12 @@
 			targets = (
 				8D57630D048677EA00EA77CD /* HelpBook */,
 				2C18E6A01088000200C065E2 /* HelpBook for 10.5 */,
-				2C13514B12239401004C82BA /* HelpBook for 10.4 */,
 				2C72FDBE095836400091C86F /* HelpBook App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2C13514E12239401004C82BA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C13514F12239401004C82BA /* HelpBook.sdef in Resources */,
-				2C13515012239401004C82BA /* Info_10_6.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2C18E6A11088000200C065E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,14 +274,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXRezBuildPhase section */
-		2C13515912239401004C82BA /* Rez */ = {
-			isa = PBXRezBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C13515A12239401004C82BA /* HelpBook.r in Rez */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2C18E6AB1088000200C065E2 /* Rez */ = {
 			isa = PBXRezBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,36 +301,6 @@
 /* End PBXRezBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2C13514C12239401004C82BA /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "exit 0;\nmv \"${INSTALL_DIR}/${FULL_PRODUCT_NAME}\" ~/.Trash\nexit 0;\nosascript <<EOS\ntry\ntell application \"Finder\"\n  set an_item to POSIX file \"${INSTALL_DIR}/${FULL_PRODUCT_NAME}\"\n  delete (an_item as alias)\nend tell\nend try\nreturn\nEOS\n";
-			showEnvVarsInLog = 0;
-		};
-		2C13514D12239401004C82BA /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/HelpBook.sdef",
-			);
-			outputPaths = (
-				"$(SRCROOT)/HelpBook.r",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/bin/sdp -f a -o ${SRCROOT}/HelpBook.r HelpBook.sdef";
-			showEnvVarsInLog = 0;
-		};
 		2C18E6AA1088000200C065E2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,16 +392,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2C13515112239401004C82BA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C13515212239401004C82BA /* main.c in Sources */,
-				2C13515312239401004C82BA /* HelpBookHandlers.c in Sources */,
-				2C13515412239401004C82BA /* AEUtils.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2C18E6A21088000200C065E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -621,42 +519,6 @@
 			};
 			name = Release;
 		};
-		2C13515C12239401004C82BA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 12;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				INFOPLIST_FILE = Info_10_4.plist;
-				INSTALL_PATH = "$(HOME)/Library/ScriptingAdditions";
-				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.osax.HelpBook;
-				PRODUCT_NAME = HelpBook;
-				SDKROOT = macosx;
-				SYMROOT = build_10_4;
-				WRAPPER_EXTENSION = osax;
-				ZERO_LINK = YES;
-			};
-			name = Debug;
-		};
-		2C13515D12239401004C82BA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CURRENT_PROJECT_VERSION = 12;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				INFOPLIST_FILE = Info_10_4.plist;
-				INSTALL_PATH = /Library/ScriptingAdditions;
-				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.osax.HelpBook;
-				PRODUCT_NAME = HelpBook;
-				SDKROOT = macosx;
-				SYMROOT = build_10_4;
-				WRAPPER_EXTENSION = osax;
-			};
-			name = Release;
-		};
 		2C18E6AE1088000200C065E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -760,15 +622,6 @@
 			buildConfigurations = (
 				1DEB911F08733D790010E9CD /* Debug */,
 				1DEB912008733D790010E9CD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2C13515B12239401004C82BA /* Build configuration list for PBXNativeTarget "HelpBook for 10.4" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2C13515C12239401004C82BA /* Debug */,
-				2C13515D12239401004C82BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
