@@ -225,6 +225,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0810;
+				TargetAttributes = {
+					8D57630D048677EA00EA77CD = {
+						DevelopmentTeam = 5VBC6385DN;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB911E08733D790010E9CD /* Build configuration list for PBXProject "HelpBook" */;
 			compatibilityVersion = "Xcode 6.3";
@@ -427,14 +432,17 @@
 		1DEB911B08733D790010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: Tetsuro Kurita (5VBC6385DN)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
+				DEVELOPMENT_TEAM = 5VBC6385DN;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				HelpBook_OSAX_VERSION = 1.3;
 				INFOPLIST_FILE = Info_10_6.plist;
 				INSTALL_PATH = "$(HOME)/Library/ScriptingAdditions";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "-DHelpBook_OSAX_VERSION=${HelpBook_OSAX_VERSION}";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.osax.HelpBook";
 				PRODUCT_NAME = HelpBook;
@@ -447,11 +455,15 @@
 		1DEB911C08733D790010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: Tetsuro Kurita (5VBC6385DN)";
-				CURRENT_PROJECT_VERSION = 12;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CURRENT_PROJECT_VERSION = 13;
+				DEVELOPMENT_TEAM = 5VBC6385DN;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				HelpBook_OSAX_VERSION = 1.3;
 				INFOPLIST_FILE = Info_10_6.plist;
 				INSTALL_PATH = /Library/ScriptingAdditions;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "-DHelpBook_OSAX_VERSION=${HelpBook_OSAX_VERSION}";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.osax.HelpBook";
 				PRODUCT_NAME = HelpBook;
@@ -523,7 +535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -542,7 +554,7 @@
 		2C18E6AF1088000200C065E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G4;
 				INFOPLIST_FILE = Info_10_5.plist;

@@ -5,24 +5,9 @@
 
 #define useLog 0
 
-UInt32 gAdditionReferenceCount = 0;
-
-#pragma mark functions for debugging
-void showFSRefPath(const FSRef *ref_p)
-{
-	CFURLRef url = CFURLCreateFromFSRef( kCFAllocatorDefault, ref_p );
-	CFStringRef cfString = NULL;
-	if ( url != NULL )
-	{
-		cfString = CFURLCopyFileSystemPath( url, kCFURLHFSPathStyle );
-		CFRelease( url );
-	}
-	CFShow(cfString);
-	CFRelease(cfString);
-}
-
 #pragma mark main routines
-OSStatus CopyMainBundleRef(FSRef *ref_p, CFURLRef *bundleURL_p, CFBundleRef *bundleRef_p)
+//OSStatus CopyMainBundleRef(FSRef *ref_p, CFURLRef *bundleURL_p, CFBundleRef *bundleRef_p)
+OSStatus CopyMainBundleRef(CFURLRef *bundleURL_p, CFBundleRef *bundleRef_p)
 {
 	OSStatus err = noErr;
 	
@@ -38,11 +23,6 @@ OSStatus CopyMainBundleRef(FSRef *ref_p, CFURLRef *bundleURL_p, CFBundleRef *bun
 		err = fnfErr; 
 		//printf("error at CFBundleCopyBundleURL\n");
 		goto bail;
-	}
-	
-	if (!CFURLGetFSRef(*bundleURL_p, ref_p)) {
-		err = fnfErr;
-		//printf("error at CFURLGetFSRef\n");
 	}
 bail:
 	return err;
@@ -140,15 +120,14 @@ bail:
 OSErr registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
 {	
 	OSErr err = noErr;
-	FSRef bundle_ref;
 	CFBundleRef bundle = NULL;
 	CFURLRef bundle_url = NULL;
 	
-	err = getFSRef(ev, keyDirectObject, &bundle_ref);
-	
+    bundle_url = CFURLCreateWithEvent(ev, keyDirectObject, &err);
+    
 	switch (err) {
         case -1701: 
-			err = CopyMainBundleRef(&bundle_ref, &bundle_url, &bundle);
+			err = CopyMainBundleRef(&bundle_url, &bundle);
 			if (err == noErr) {
 				CFRetain(bundle);
 				break;
@@ -159,22 +138,21 @@ OSErr registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
 			goto bail;
     }
 	
-#if useLog	
-	showFSRefPath(&bundle_ref);
+#if useLog
+    CFShow(bundle_url);
 #endif
-	err = AHRegisterHelpBook(&bundle_ref);
+    err = AHRegisterHelpBookWithURL(bundle_url);
 	
 	if (err != noErr) {
 		Boolean try_recover = false;
 		getBoolValue(ev, kReccoverParam,  &try_recover);
 		if (try_recover) {
 			if (!bundle) {
-				bundle_url = CFURLCreateFromFSRef(NULL, &bundle_ref);
 				bundle = CFBundleCreate(NULL, bundle_url);
 			}
 			if (recoverInfoPlist(bundle, bundle_url)){
 				CFRelease(bundle); bundle = NULL; // to notify the bundle was updated.
-				err = AHRegisterHelpBook(&bundle_ref);
+				err = AHRegisterHelpBookWithURL(bundle_url);
 				if (err != noErr) {
 					err = 1851;
 					goto bail;
@@ -185,7 +163,6 @@ OSErr registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
 	}
 	
 	if (bundle == NULL) {
-		bundle_url = CFURLCreateFromFSRef(NULL, &bundle_ref);
 		bundle = CFBundleCreate(NULL, bundle_url);
 	}
 	
@@ -222,7 +199,7 @@ OSErr setupErrorString(const AppleEvent *ev, AppleEvent *reply, OSErr err)
 	OSErr err_url = noErr;
 	file_url = CFURLCreateWithEvent(ev, keyDirectObject, &err_url);
 	if (file_url) {
-		path = CFURLCopyFileSystemPath(file_url, kCFURLHFSPathStyle);
+		path = CFURLCopyFileSystemPath(file_url, kCFURLPOSIXPathStyle);
 	}
 	if ((err_url == noErr) && path) {
 		msg = CFStringCreateWithFormat(NULL, NULL, template, path);
@@ -242,16 +219,13 @@ bail:
 
 OSErr HelpBookOSAXVersionHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon)
 {
-	++gAdditionReferenceCount;
 	OSErr err;
 	err = putStringToEvent(reply, keyAEResult, CFSTR(STR(HelpBook_OSAX_VERSION)), kCFStringEncodingUnicode);
 	return err;
-	--gAdditionReferenceCount;
 }
 
 OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon)
-{	
-	++gAdditionReferenceCount;
+{
 #if useLog
 	showAEDesc(ev);
 #endif
@@ -267,13 +241,11 @@ OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon r
 	
 bail:
 	safeRelease(bookName);
-	--gAdditionReferenceCount;
 	return err;
 }
 
 OSErr showHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refcon)
 {
-	++gAdditionReferenceCount;
 #if useLog
 	showAEDesc(ev);
 #endif
@@ -291,7 +263,6 @@ OSErr showHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refco
 	
 bail:
 	safeRelease(bookName);
-	--gAdditionReferenceCount;
 	return err;
 
 }
