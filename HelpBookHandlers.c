@@ -2,11 +2,11 @@
 #include <sys/param.h>
 #include "AEUtils/AEUtils.h"
 #include "HelpBookOSAXConsntatns.h"
+#include <syslog.h>
 
 #define useLog 0
 
 #pragma mark main routines
-//OSStatus CopyMainBundleRef(FSRef *ref_p, CFURLRef *bundleURL_p, CFBundleRef *bundleRef_p)
 OSStatus CopyMainBundleRef(CFURLRef *bundleURL_p, CFBundleRef *bundleRef_p)
 {
 	OSStatus err = noErr;
@@ -122,13 +122,17 @@ OSErr registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
 	OSErr err = noErr;
 	CFBundleRef bundle = NULL;
 	CFURLRef bundle_url = NULL;
-	
+#if useLog
+    syslog(LOG_NOTICE, "start registerHelpBook");
+#endif
     bundle_url = CFURLCreateWithEvent(ev, keyDirectObject, &err);
     
 	switch (err) {
         case -1701: 
 			err = CopyMainBundleRef(&bundle_url, &bundle);
 			if (err == noErr) {
+                syslog(LOG_NOTICE, "before at CFRetain(bundle)");
+                fprintf(stderr, "before at CFRetain(bundle)\n");
 				CFRetain(bundle);
 				break;
 			}
@@ -158,16 +162,22 @@ OSErr registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
 					goto bail;
 				}
 			}
-		}
+        } else {
+            goto bail;
+        }
 		if (err != noErr) goto bail;
-	}
+    } else {
+#if useLog
+        syslog(LOG_NOTICE, "success to AHRegisterHelpBookWithURL");
+#endif
+    }
 	
 	if (bundle == NULL) {
 		bundle = CFBundleCreate(NULL, bundle_url);
 	}
 	
 	*bookName = CFBundleGetValueForInfoDictionaryKey(bundle, CFSTR("CFBundleHelpBookName"));
-	CFRetain(*bookName);
+	if (*bookName) CFRetain(*bookName);
 bail:
 	safeRelease(bundle);
 	safeRelease(bundle_url);
@@ -235,8 +245,12 @@ OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon r
 
 	err = setupErrorString(ev, reply, err);
 	
-	if ((err == noErr) && (bookName != NULL)) {
-		err = putStringToEvent(reply, keyAEResult, bookName, typeUnicodeText);
+    if (err != noErr) goto bail;
+    
+    if (bookName) {
+        err = putStringToEvent(reply, keyAEResult, bookName, typeUnicodeText);
+    } else {
+        putMissingValueToReply(reply);
 	}
 	
 bail:
