@@ -439,7 +439,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				HelpBook_OSAX_VERSION = 1.3;
 				INFOPLIST_FILE = Info_10_6.plist;
 				INSTALL_PATH = "$(HOME)/Library/ScriptingAdditions";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
@@ -460,7 +459,6 @@
 				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 5VBC6385DN;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				HelpBook_OSAX_VERSION = 1.3;
 				INFOPLIST_FILE = Info_10_6.plist;
 				INSTALL_PATH = /Library/ScriptingAdditions;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
@@ -498,6 +496,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HelpBook_OSAX_VERSION = 1.2;
 				INSTALL_PATH = /Library/ScriptingAdditions;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -527,6 +526,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HelpBook_OSAX_VERSION = 1.2;
 				INSTALL_PATH = /Library/ScriptingAdditions;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -538,7 +538,6 @@
 				CURRENT_PROJECT_VERSION = 13;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info_10_5.plist;
 				INSTALL_PATH = "$(HOME)/Library/ScriptingAdditions";
@@ -547,7 +546,6 @@
 				PRODUCT_NAME = HelpBook;
 				SYMROOT = build_10_5;
 				WRAPPER_EXTENSION = osax;
-				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
@@ -556,7 +554,6 @@
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 13;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G4;
 				INFOPLIST_FILE = Info_10_5.plist;
 				INSTALL_PATH = /Library/ScriptingAdditions;
 				"MACOSX_DEPLOYMENT_TARGET[sdk=macosx10.4]" = 10.4;
