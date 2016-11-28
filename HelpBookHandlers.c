@@ -131,8 +131,6 @@ OSStatus registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
         case -1701: 
 			err = CopyMainBundleRef(&bundle_url, &bundle);
 			if (err == noErr) {
-                syslog(LOG_NOTICE, "before at CFRetain(bundle)");
-                fprintf(stderr, "before at CFRetain(bundle)\n");
 				CFRetain(bundle);
 				break;
 			}
@@ -158,7 +156,7 @@ OSStatus registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
 				CFRelease(bundle); bundle = NULL; // to notify the bundle was updated.
 				err = AHRegisterHelpBookWithURL(bundle_url);
 				if (err != noErr) {
-					err = 1851;
+					err = registerHBAfterRecoveringErr;
 					goto bail;
 				}
 			}
@@ -194,15 +192,16 @@ OSErr setupErrorString(const AppleEvent *ev, AppleEvent *reply, OSErr err)
 	
 	if (err == noErr) return err;
 	switch (err) {
-		case -50:
+        case -50: /* paramErr : error in user parameter list.
+                     defoined in MacErrors.h */
 			template = CFSTR("Failed to register HelpBook for \n\"%@\".");
-			err = 1850;
+			err = regiesrHBErr;
 			break;
-		case 1851:
+		case registerHBAfterRecoveringErr:
 			template = CFSTR("Succeeded in recovering Info.plist but failed to register HelpBook for \n\"%@\" .\n\nYou may need to relaunch the application.");
 			break;
-        case 1852:
-            template = CFSTR("No CFBundleHelpBookName in \"%@\".");
+        case NoCFBundleHelpBookName:
+            template = CFSTR("No CFBundleHelpBookName in Info.plist of \"%@\".");
             break;
 		default:
 			goto bail;
@@ -254,7 +253,7 @@ OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon r
         err = putStringToEvent(reply, keyAEResult, bookName, typeUnicodeText);
     } else {
         putMissingValueToReply(reply);
-        err = setupErrorString(ev, reply, 1852);
+        err = setupErrorString(ev, reply, NoCFBundleHelpBookName);
 	}
 bail:
 	safeRelease(bookName);
@@ -280,7 +279,7 @@ OSErr showHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refco
         if (err != noErr) goto bail;
     } else {
         putMissingValueToReply(reply);
-        err = setupErrorString(ev, reply, 1852);
+        err = setupErrorString(ev, reply, NoCFBundleHelpBookName);
     }
 bail:
 	safeRelease(bookName);
