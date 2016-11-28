@@ -117,15 +117,15 @@ bail:
 	return result;
 }
 
-OSErr registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
+OSStatus registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
 {	
-	OSErr err = noErr;
+	OSStatus err = noErr;
 	CFBundleRef bundle = NULL;
 	CFURLRef bundle_url = NULL;
 #if useLog
     syslog(LOG_NOTICE, "start registerHelpBook");
 #endif
-    bundle_url = CFURLCreateWithEvent(ev, keyDirectObject, &err);
+    bundle_url = CFURLCreateWithEvent(ev, keyDirectObject, (OSErr *)&err);
     
 	switch (err) {
         case -1701: 
@@ -201,6 +201,9 @@ OSErr setupErrorString(const AppleEvent *ev, AppleEvent *reply, OSErr err)
 		case 1851:
 			template = CFSTR("Succeeded in recovering Info.plist but failed to register HelpBook for \n\"%@\" .\n\nYou may need to relaunch the application.");
 			break;
+        case 1852:
+            template = CFSTR("No CFBundleHelpBookName in \"%@\".");
+            break;
 		default:
 			goto bail;
 			break;
@@ -239,7 +242,7 @@ OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon r
 #if useLog
 	showAEDesc(ev);
 #endif
-	OSErr err = noErr;
+	OSStatus err = noErr;
 	CFStringRef bookName = NULL;
 	err = registerHelpBook(ev, &bookName);
 
@@ -251,8 +254,8 @@ OSErr registerHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon r
         err = putStringToEvent(reply, keyAEResult, bookName, typeUnicodeText);
     } else {
         putMissingValueToReply(reply);
+        err = setupErrorString(ev, reply, 1852);
 	}
-	
 bail:
 	safeRelease(bookName);
 	return err;
@@ -263,18 +266,22 @@ OSErr showHelpBookHandler(const AppleEvent *ev, AppleEvent *reply, SRefCon refco
 #if useLog
 	showAEDesc(ev);
 #endif
-	OSErr err = noErr;
+	OSStatus err = noErr;
 	CFStringRef bookName = NULL;
 	err = registerHelpBook(ev, &bookName);
 	
 	err = setupErrorString(ev, reply, err);
 	
-	if ((err == noErr) && (bookName != NULL)) {
-		err = AHGotoPage(bookName, NULL, NULL);
-		if (err != noErr) goto bail;
-		err = putStringToEvent(reply, keyAEResult, bookName, typeUnicodeText);
-	}
-	
+    if (err != noErr) goto bail;
+    
+    if (bookName) {
+        putStringToEvent(reply, keyAEResult, bookName, typeUnicodeText);
+        err = AHGotoPage(bookName, NULL, NULL);
+        if (err != noErr) goto bail;
+    } else {
+        putMissingValueToReply(reply);
+        err = setupErrorString(ev, reply, 1852);
+    }
 bail:
 	safeRelease(bookName);
 	return err;
