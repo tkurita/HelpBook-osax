@@ -14,14 +14,14 @@ OSStatus CopyMainBundleRef(CFURLRef *bundleURL_p, CFBundleRef *bundleRef_p)
 	*bundleRef_p = CFBundleGetMainBundle();
 	if (*bundleRef_p == NULL) {
 		err = fnfErr; 
-		printf("error at CFBundleGetMainBundle\n");
+        syslog(LOG_NOTICE, "error at CFBundleGetMainBundle");
 		goto bail;
 	}
 		
 	*bundleURL_p = CFBundleCopyBundleURL(*bundleRef_p);// 2
 	if (*bundleURL_p == NULL) {
 		err = fnfErr; 
-		//printf("error at CFBundleCopyBundleURL\n");
+		syslog(LOG_NOTICE, "error at CFBundleCopyBundleURL");
 		goto bail;
 	}
 bail:
@@ -119,33 +119,40 @@ bail:
 
 OSStatus registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
 {	
-	OSStatus err = noErr;
+	OSErr err = noErr;
+    OSStatus status = noErr;
 	CFBundleRef bundle = NULL;
 	CFURLRef bundle_url = NULL;
 #if useLog
     syslog(LOG_NOTICE, "start registerHelpBook");
 #endif
-    bundle_url = CFURLCreateWithEvent(ev, keyDirectObject, (OSErr *)&err);
-    
+    bundle_url = CFURLCreateWithEvent(ev, keyDirectObject, &err);
+#if useLog
+    syslog(LOG_NOTICE, "error code after CFURLCreateWithEvent : %d", err);
+#endif
 	switch (err) {
         case -1701: 
-			err = CopyMainBundleRef(&bundle_url, &bundle);
-			if (err == noErr) {
+			status = CopyMainBundleRef(&bundle_url, &bundle);
+			if (status == noErr) {
 				CFRetain(bundle);
 				break;
-			}
+            } else {
+                goto bail;
+            }
         case noErr:
             break;	
         default:
+            status = err;
 			goto bail;
     }
 	
 #if useLog
-    CFShow(bundle_url);
+    CFStringRef a_str = CFURLGetString(bundle_url);
+    syslog(LOG_NOTICE, "bundle_url : %s", CFStringGetCStringPtr(a_str, kCFStringEncodingUTF8));
 #endif
-    err = AHRegisterHelpBookWithURL(bundle_url);
+    status = AHRegisterHelpBookWithURL(bundle_url);
 	
-	if (err != noErr) {
+	if (status != noErr) {
 		Boolean try_recover = false;
 		getBoolValue(ev, kReccoverParam,  &try_recover);
 		if (try_recover) {
@@ -154,16 +161,16 @@ OSStatus registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
 			}
 			if (recoverInfoPlist(bundle, bundle_url)){
 				CFRelease(bundle); bundle = NULL; // to notify the bundle was updated.
-				err = AHRegisterHelpBookWithURL(bundle_url);
-				if (err != noErr) {
-					err = registerHBAfterRecoveringErr;
+				status = AHRegisterHelpBookWithURL(bundle_url);
+				if (status != noErr) {
+					status = registerHBAfterRecoveringErr;
 					goto bail;
 				}
 			}
         } else {
             goto bail;
         }
-		if (err != noErr) goto bail;
+		if (status != noErr) goto bail;
     } else {
 #if useLog
         syslog(LOG_NOTICE, "success to AHRegisterHelpBookWithURL");
@@ -179,7 +186,7 @@ OSStatus registerHelpBook(const AppleEvent *ev, CFStringRef *bookName)
 bail:
 	safeRelease(bundle);
 	safeRelease(bundle_url);
-	return err;
+	return status;
 }
 
 
